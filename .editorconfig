@@ -1,0 +1,58 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+# Indentation style
+[*.{js,ts,jsx,tsx,json,html,css,scss}]
+indent_style = space
+indent_size = 2
+
+# Matches multiple files with brace expansion notation
+[*.{md,yml}]
+indent_style = space
+indent_size = 2
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+# Set default charset
+[*.{js,ts,jsx,tsx,json,html,css,scss,md,yml}]
+charset = utf-8
+
+# Trim trailing whitespace
+[*.{js,ts,jsx,tsx,json,html,css,scss,md,yml}]
+trim_trailing_whitespace = true
+
+# Specific settings for TypeScript files
+[*.ts]
+indent_size = 2
+
+# Specific settings for JavaScript files
+[*.js]
+indent_size = 2
+
+# Specific settings for JSON files
+[*.json]
+indent_size = 2
+
+# Specific settings for JSX files
+[*.jsx]
+indent_size = 2
+
+# Specific settings for TSX files
+[*.tsx]
+indent_size = 2
+
+# Specific settings for HTML files
+[*.html]
+indent_size = 2
+
+# Specific settings for CSS and SCSS files
+[*.{css,scss}]
+indent_size = 2

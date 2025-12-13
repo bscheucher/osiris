@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "Meine Seminare",
+    "description": "Seminare",
+    "imagePath": "image_url",
+    "icon": "HiCalendar",
+    "width": 8,
+    "height": 3
+  },
+  {
+    "id": "2",
+    "title": "Eingelesene Teilnehmerdaten",
+    "description": "Eingelesene Teilnehmerdaten",
+    "imagePath": "image_url",
+    "icon": "HiOutlineUsers",
+    "width": 10,
+    "height": 3
+  },
+  {
+    "id": "3",
+    "title": "Meine persönlichen Daten",
+    "description": "Mein Vertrag und meine Laufbahn.",
+    "imagePath": "image_url",
+    "icon": "HiOutlineUser",
+    "width": 10,
+    "height": 4
+  },
+  {
+    "id": "4",
+    "title": "Project Controlling",
+    "description": "Projekte und Hochrechnungen.",
+    "imagePath": "image_url",
+    "icon": "HiCalculator",
+    "width": 5,
+    "height": 5
+  }
+]

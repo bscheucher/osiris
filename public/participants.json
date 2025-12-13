@@ -1,0 +1,162 @@
+{
+  "success": true,
+  "data": [
+    {
+      "type": "teilnehmer",
+      "attributes": [
+        {
+          "vorname": "Daniela",
+          "nachname": "MANAILA",
+          "svNummer": "12-11-1992",
+          "id": 1,
+          "errors": [2, 4, 3, 17, 14, 13]
+        },
+        {
+          "vorname": "Geetaöäö",
+          "nachname": "Zethofer",
+          "svNummer": "1974-11-19",
+          "id": 2,
+          "errors": [2]
+        },
+        {
+          "vorname": "Halima",
+          "nachname": "",
+          "svNummer": "",
+          "id": 3,
+          "errors": [2, 5, 23]
+        },
+        {
+          "vorname": "Liviu",
+          "nachname": "Michai",
+          "svNummer": "",
+          "id": 5,
+          "errors": [4, 5, 19]
+        },
+        {
+          "vorname": "Nebojsa",
+          "nachname": "Branisavlevic",
+          "svNummer": "",
+          "id": 6,
+          "errors": [2, 5, 19]
+        },
+        {
+          "vorname": "Svetlana",
+          "nachname": "Dementieva",
+          "svNummer": "",
+          "id": 7,
+          "errors": [4, 5, 23]
+        },
+        {
+          "vorname": "Yehor",
+          "nachname": "Marych",
+          "svNummer": "",
+          "id": 8,
+          "errors": [2, 5, 19]
+        },
+        {
+          "vorname": "Zuzana",
+          "nachname": "Pasinska",
+          "svNummer": "",
+          "id": 9,
+          "errors": [4, 5]
+        },
+        {
+          "vorname": "",
+          "nachname": "",
+          "svNummer": "",
+          "id": 10,
+          "errors": [1, 2, 5]
+        },
+        {
+          "vorname": "Ana-Crina",
+          "nachname": "Secheli",
+          "svNummer": "",
+          "id": 11,
+          "errors": [4, 5]
+        },
+        {
+          "vorname": "Andrei",
+          "nachname": "Ibraev",
+          "svNummer": "",
+          "id": 12,
+          "errors": [5]
+        },
+        {
+          "vorname": "Güllü",
+          "nachname": "",
+          "svNummer": "",
+          "id": 16,
+          "errors": [2, 5, 23, 19]
+        },
+        {
+          "vorname": "Ivona",
+          "nachname": "Walland",
+          "svNummer": "",
+          "id": 61,
+          "errors": [4, 5]
+        },
+        {
+          "vorname": "Miroslava",
+          "nachname": "HERDOVA",
+          "svNummer": "",
+          "errors": [2, 5]
+        },
+        {
+          "vorname": "Rahela",
+          "nachname": "",
+          "svNummer": "",
+          "id": 62,
+          "errors": [2, 5]
+        },
+        {
+          "vorname": "Rana Muhamad-Rana Muhamad",
+          "nachname": "",
+          "svNummer": "",
+          "id": 63,
+          "errors": [2, 2, 5]
+        },
+        {
+          "vorname": "",
+          "nachname": "Egrül",
+          "svNummer": "",
+          "id": 65,
+          "errors": [2, 5, 23, 19]
+        },
+        {
+          "vorname": "",
+          "nachname": "Laszlo",
+          "svNummer": "",
+          "id": 64,
+          "errors": [2, 5, 19]
+        },
+        {
+          "vorname": "",
+          "nachname": "",
+          "svNummer": "",
+          "id": 66,
+          "errors": [1, 2, 5]
+        }
+      ]
+    },
+    {
+      "type": "seminars",
+      "attributes": [
+        {
+          "name": "Deutsch_MAF_Standard_K_230_B2",
+          "id": 1,
+          "teilnehmer": [1, 2, 3]
+        },
+        {
+          "name": "Deutsch_MAF_Standard_K_207_A2",
+          "id": 2,
+          "teilnehmer": [5, 6, 7, 8, 9, 10, 11, 12, 16]
+        },
+        {
+          "name": "Deutsch PS NORD_Standard_K_329_A1+",
+          "id": 3,
+          "teilnehmer": [61, 62, 63, 64, 65, 66]
+        }
+      ]
+    }
+  ]
+}

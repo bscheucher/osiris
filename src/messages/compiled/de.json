@@ -1,0 +1,2541 @@
+{
+  "common": {
+    "label": {
+      "accepted": "Akzeptiert",
+      "ja": "Ja",
+      "keineRechte": "Ihnen fehlen die Rechte um diese Ansicht zu öffnen.",
+      "nein": "Nein",
+      "noEntries": "Keine Einträge vorhanden",
+      "notAccepted": "Nicht akzeptiert",
+      "notVerified": "Nicht verifiziert",
+      "verified": "Verifiziert"
+    },
+    "abwesenheitsstatus": {
+      "accepted": "Genehmigt",
+      "accepted_final": "Genehmigt – Storno abgelehnt",
+      "canceled": "Storniert",
+      "error": "Fehlerhaft",
+      "invalid": "Ungültig",
+      "new": "Offen",
+      "noStatus": "Kein Status",
+      "rejected": "Abgelehnt",
+      "request_cancellation": "Zur Stornierung",
+      "used": "Verbraucht",
+      "valid": "Zur Genehmigung"
+    }
+  },
+  "components": {
+    "folderTree": {
+      "label": {
+        "dateiTyp": "Dateityp",
+        "erstelltAm": "Erstellt am",
+        "name": "Name"
+      }
+    },
+    "fileUpload": {
+      "label": {
+        "herunterladen": "Herunterladen",
+        "loeschen": "Löschen",
+        "vorschau": "Vorschau",
+        "hochladen": "Hochladen",
+        "successUpload": "Datei \"{filename}\" erfolgreich hochgeladen.",
+        "errorUpload": "Hochladen fehlgeschlagen.",
+        "errorSize": "Die Datei darf nich größer als 10MB sein."
+      }
+    },
+    "berufSelect": {
+      "label": {
+        "alleAusklappen": "Alle Ausklappen",
+        "alleEinklappen": "Alle Einklappen",
+        "auswahlZuruecksetzen": "Auswahl zurücksetzen",
+        "berufAuswaehlen": "Beruf auswählen",
+        "berufeAuswaehlen": "Berufe auswählen",
+        "keineBerufe": "Keine passenden Berufe gefunden",
+        "sucheEingeben": "Freitextsuche hier eingeben"
+      }
+    },
+    "chatbot": {
+      "buttons": {
+        "close": "Close",
+        "newChat": "Neuen Chat starten"
+      },
+      "error": "Die Anfrage ist fehlgeschlagen",
+      "intro1": "<strong>Hallo, ich bin AIVO – dein digitaler Assistent bei ibis acam.</strong>",
+      "intro2": "Ich unterstütze dich bei Fragen zu internen Abläufen, Dokumenten und zur Nutzung von ibosNG.",
+      "intro3": "Stell' mir einfach eine Frage – oder klick auf eine der Schnellfragen, um direkt loszulegen.",
+      "placeholder": {
+        "input": "Fragen Sie AIVO..."
+      },
+      "screenreader": {
+        "collapse": "Zu normaler Ansicht wechseln",
+        "expand": "Zu Vollbild-Ansicht wechseln",
+        "newChat": "Neuer Chat"
+      },
+      "subtitle": "Digitaler Assistent",
+      "thinking": "AIVO überlegt...",
+      "title": "AIVO"
+    },
+    "comboSelect": {
+      "suche": "Suche...",
+      "zuruecksetzen": "Auswahl zurücksetzen"
+    },
+    "confirmModal": {
+      "button": {
+        "cancel": "Abbrechen",
+        "submit": "Fortfahren"
+      },
+      "text": "Wenn Sie diese Seite verlassen, werden die Änderungen verworfen.",
+      "title": "Möchten Sie wirklich fortfahren?"
+    },
+    "dashboard": {
+      "table": {
+        "abweichungPlan": "Abweichung PLAN",
+        "abweichungSoll": "Abweichung SOLL",
+        "forecast": "FORECAST",
+        "ist": "IST",
+        "keineDaten": "Keine Daten verfügbar für die gewählten Einstellungen",
+        "keinView": "dieser View ist nicht im Editmodus verfügbar und erst nach dem Speichern sichtbar",
+        "plan": "PLAN",
+        "projekt": "Projekt:",
+        "soll": "SOLL",
+        "stunden": "Stunden",
+        "subtitel": "Aktuelle Hochrechnung auf die Projektdauer",
+        "umsatz": "Umsatz"
+      }
+    },
+    "mitarbeiter": {
+      "tab": {
+        "form": {
+          "Button": {
+            "bereitsHochgeladen": "Datei bereits hochgeladen",
+            "save": "Speichern",
+            "upload": "Upload"
+          },
+          "checkkbox": {
+            "prefix": "Nein",
+            "suffix": "Ja"
+          },
+          "message": {
+            "error": {
+              "erforderlich": "Dieses Feld ist erforderlich",
+              "ungueltig": "Ungültige Eingabe",
+              "validierungFehlgeschlagen": "Validierung fehlgeschlagen"
+            },
+            "success": {
+              "uploadErfolgreich": "Datei erfolgreich hochgeladen."
+            }
+          }
+        }
+      }
+    },
+    "modal": {
+      "titel": "Bestätigen"
+    },
+    "pagination": {
+      "anzahlEintraege": "Einträge pro Seite",
+      "bis": "bis",
+      "eintraegeProSeite": "Einträge pro Seite",
+      "eintrag": "Eintrag",
+      "ergebnissen": "Ergebnissen",
+      "von": "von",
+      "weiter": "Weiter",
+      "zurueck": "Zurück"
+    },
+    "pdfViewer": {
+      "downloadInstead": "Laden Sie das Dokument stattdessen herunter",
+      "noSupport": "Ihr Browser unterstützt keine PDF-Ansicht"
+    },
+    "select": {
+      "suche": "Suche...",
+      "zuruecksetzen": "Auswahl zurücksetzen"
+    },
+    "teilnehmer": {
+      "form": {
+        "message": {
+          "error": {
+            "datumIstUngueltig": "Das eingetragene Datum ({date}) ist ungültig. Bitte ein gültiges Datum wählen",
+            "datumWarUngueltig": "Das eingetragene Datum ({date}) war ungültig. Bitte ein gültiges Datum wählen"
+          }
+        }
+      },
+      "search": {
+        "error": {
+          "laden": "Suche nach Teilnehmenden fehlgeschlagen"
+        }
+      }
+    },
+    "workflowStatusBadge": {
+      "finished": "Fertig"
+    }
+  },
+  "navigation": {
+    "abmelden": {
+      "label": "Abmelden"
+    },
+    "dashboard": "Dashboard",
+    "meinBereich": {
+      "abwesenheit": "Meine Abwesenheiten",
+      "label": "Mein Bereich",
+      "meineZeiten": "Meine Zeiten",
+      "personalakt": "Personalakt",
+      "umbuchung": "Umbuchung",
+      "urlaub": "Urlaubskonto"
+    },
+    "meineMitarbeiter": {
+      "abwesenheitenGenehmigen": "Abwesenheiten",
+      "label": "Meine Mitarbeitenden"
+    },
+    "mitarbeiter": {
+      "erfassen": "Erfassen",
+      "label": "Mitarbeitende",
+      "leistungenErfassen": "Leistungen erfassen",
+      "onboarding": "Onboarding",
+      "vereinbarungen": "Vereinbarungen",
+      "vertragsaenderungen": "Vertragsänderungen",
+      "verwalten": "Verwalten"
+    },
+    "reports": {
+      "basisReports": "Basis Reports",
+      "label": "Reports"
+    },
+    "seminare": {
+      "label": "Seminare",
+      "vertretungsplanung": "Vertretungsplanung"
+    },
+    "teilnehmer": {
+      "anlegen": "Anlegen",
+      "anwesenheitenVerwalten": "Anwesenheiten verwalten",
+      "austritte": {
+        "label": "Austritte"
+      },
+      "korrigieren": {
+        "label": "Korrigieren"
+      },
+      "label": "Teilnehmende",
+      "onboarding": "Onboarding",
+      "uebertragen": "Abwesenheiten übertragen",
+      "verwalten": "Verwalten"
+    }
+  },
+  "login": {
+    "button": {
+      "anmelden": {
+        "label": "Anmelden"
+      }
+    },
+    "feld": {
+      "label": {
+        "email": "E-Mail-Adresse",
+        "passwort": "Passwort"
+      },
+      "placeholder": {
+        "email": "Name@ibisacam.at",
+        "passwort": "Passwort"
+      }
+    },
+    "message": {
+      "error": {
+        "datenUeberpruefen": "Bitte überprüfen Sie die eingegebenen Daten",
+        "fehlgeschlagen": "Login fehlgeschlagen"
+      }
+    },
+    "required": {
+      "email": {
+        "regex": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "text": "E-Mail-Adresse ist erforderlich"
+      },
+      "passwort": {
+        "text": "Passwort ist erforderlich"
+      }
+    }
+  },
+  "dashboard": {
+    "delete": {
+      "message": {
+        "success": {
+          "deleted": "Dashboard erfolgreich gelöscht"
+        }
+      }
+    },
+    "favouriteDashboard": {
+      "message": {
+        "success": {
+          "saved": "Favourite Dashboard gespeichert"
+        }
+      }
+    },
+    "fehlerhafteTeilnehmer": {
+      "header": {
+        "dateiname": "Dateiname",
+        "datum": "Datum",
+        "fehler": "Fehler",
+        "gesamt": "Gesamt",
+        "massnahmenummer": "Maßnahmennummer",
+        "ok": "OK",
+        "pnr": "PNr.",
+        "seminar": "Seminar",
+        "snr": "SNr."
+      },
+      "keineDaten": "Keine eingelesenen Teilnehmenden vorhanden",
+      "tage": "Tage",
+      "titel": "Eingelesene Teilnehmendendaten",
+      "zeitraum": "Zeitraum"
+    },
+    "meinePersoenlichenDaten": {
+      "header": {
+        "historie": {
+          "arbeitszeitmodell": "Arbeitszeitmodell",
+          "bis": "Bis",
+          "dienstunterbrechung": "Dienstunterbrechung",
+          "funktion": "Funktion",
+          "kostenstelle": "Kostenstelle",
+          "stufe": "Stufe",
+          "verwendungsgruppe": "Verwendungsgruppe",
+          "von": "Von",
+          "wochenstunden": "Wochenstunden"
+        },
+        "subtitel": {
+          "meineLaufbahn": "Meine Laufbahn",
+          "meinVertrag": "Mein Vertrag"
+        },
+        "vertrag": {
+          "dienstort": "Dienstort",
+          "eintrittsdatum": "Eintrittsdatum",
+          "personalnummer": "Personalnummer"
+        }
+      },
+      "titel": "Meine persönlichen Daten"
+    },
+    "meineSeminareDaten": {
+      "header": {
+        "bis": "Bis",
+        "ort": "Ort",
+        "pnr": "PNr.",
+        "seminar": "Seminar",
+        "snr": "SNr.",
+        "uhrzeit": "Uhrzeit",
+        "von": "Von"
+      },
+      "keineDaten": "Keine Seminare vorhanden",
+      "titel": "Meine Seminare"
+    },
+    "message": {
+      "error": {
+        "leer": "Ein leeres Dashboard kann nicht gespeichert werden.",
+        "nameExistiertBereits": "Dashboardname existiert bereits.",
+        "nameLeer": "Der Dashboardname darf nicht leer sein."
+      },
+      "success": {
+        "save": "Dashboard gespeichert",
+        "savePrefix": "Neues"
+      }
+    },
+    "projectControllingDaten": {
+      "abweichungPlan": "Abweichung PLAN",
+      "abweichungSoll": "Abweichung SOLL",
+      "bis": "bis",
+      "checkbox": {
+        "active": "aktiv",
+        "inDerZukunft": "in der Zukunft"
+      },
+      "dropdown": {
+        "m": "aktueller Monat",
+        "mtd": "Monatsanfang bis heute",
+        "nnxm": "übernächster Monat",
+        "nnxw": "übernächste Woche",
+        "nxm": "nächster Monat",
+        "nxw": "nächste Woche",
+        "otherValue": "anderer Zeitraum",
+        "peot": "Projektstart bis heute",
+        "tdeop": "heute bis Projektende",
+        "tdeoy": "heute bis Jahresende",
+        "y": "aktuelles Jahr bis heute"
+      },
+      "forecast": "FORECAST",
+      "ist": "IST",
+      "message": {
+        "error": {
+          "noStartAndEndDate": "Start- und Enddatum müssen gesetzt sein",
+          "startDateBeforeEndDate": "Startdatum muss vor dem Enddatum liegen"
+        }
+      },
+      "plan": "PLAN",
+      "projekt": "Projekt",
+      "soll": "SOLL",
+      "stunden": "Stunden",
+      "subtitle": "Aktuelle Hochrechnung auf die Projektdauer",
+      "text": {
+        "noData": "Keine Daten verfügbar für die gewählten Einstellungen",
+        "preview": "dieser View ist nicht im Editmodus verfügbar und erst nach dem Speichern sichtbar"
+      },
+      "titel": "Project Controlling",
+      "umsatz": "Umsatz",
+      "von": "von"
+    },
+    "toolbar": {
+      "button": {
+        "erstellen": "Neues Dashboard erstellen"
+      },
+      "cancel": "Abbrechen",
+      "input": {
+        "message": {
+          "error": "Der Name sollte nicht länger als 30 Zeichen sein."
+        },
+        "platzhalter": "Name für das Dashboard"
+      },
+      "save": "Speichern"
+    },
+    "widget": {
+      "hinzufuegen": "Widget Hinzufügen",
+      "input": {
+        "suche": "Suche"
+      },
+      "suche": "Suche"
+    }
+  },
+  "urlaubsKonto": {
+    "create": {},
+    "delete": {},
+    "edit": {},
+    "overview": {
+      "create": "Abwesenheit anlegen",
+      "error": {
+        "laden": "Fehler beim Laden des Urlaubskontos"
+      },
+      "kontoanzeige": {
+        "anspruch": "Saldoübernahme",
+        "konsum": "Verbuchte Urlaubstage",
+        "nextAnspruch": "Nächster Anspruch am",
+        "noData": "Keine Daten verfügbar",
+        "rest": "Verfügbare Urlaubstage",
+        "titel": "Kontoanzeige"
+      },
+      "label": {
+        "historie": "Historie",
+        "historieInfo": "Sofern du keinen anderen Zeitraum auswählst, wird die Entwicklung deines Resturlaubes vom 1.1.2025 (Saldoübernahme aus Sage) bis zum Monatsletzten des laufenden Monats angezeigt.",
+        "overview": "Übersicht der Urlaube",
+        "saldoInfo": "Resturlaub zum Zeitpunkt",
+        "tageInfo": "Anzahl der verbrauchten Urlaubstage"
+      },
+      "searchform": {
+        "labels": {
+          "endDate": "Zeitraum bis",
+          "reset": "Zurücksetzen",
+          "show": "Anzeigen",
+          "startDate": "Zeitraum von"
+        },
+        "placeholder": {
+          "endDate": "Datum auswählen",
+          "startDate": "Datum auswählen"
+        }
+      },
+      "table": {
+        "art": "Art",
+        "bemerkung": "Bemerkung",
+        "lhrCalculated": {
+          "tooltip": "Indikative Dauer. Mit der Beantragung wird die Dauer der Abwesenheit vom Lohnverrechnungssystem entsprechend deiner Arbeitszeiten neu berechnet und aktualisiert."
+        },
+        "noData": "Derzeit keine Angaben vorhanden.",
+        "saldo": "Saldo",
+        "status": "Status",
+        "tage": "Tage",
+        "zeitraum": "Zeitraum"
+      },
+      "urlaubType": {
+        "urlaub": "Urlaub"
+      }
+    }
+  },
+  "meineAbwesenheiten": {
+    "create": {
+      "abwesenheitsType": {
+        "urlau": "Urlaub",
+        "zeitausgleich": "Zeitausgleich"
+      },
+      "button": {
+        "cancel": "Abbrechen",
+        "create": "Abwesenheit anlegen",
+        "save": "Abwesenheit speichern"
+      },
+      "comment": "Anmerkung",
+      "commentPlaceholder": "Anmerkung hinterlassen",
+      "endDate": "Enddatum bis",
+      "endDatePlaceholder": "Enddatum auswählen",
+      "endDateRequired": "Bitte Enddatum auswählen",
+      "error": {
+        "invalid": "Ungültige Abwesenheit angelegt",
+        "laden": "Fehler beim Speichern der Abwesenheit"
+      },
+      "label": "Abwesenheiten anlegen",
+      "message": {
+        "success": {
+          "save": "Abwesenheit erfolgreich gespeichert"
+        }
+      },
+      "seminarName": "Seminar",
+      "seminarNamePlaceholder": "Seminar auswählen",
+      "startDate": "Startdatum von",
+      "startDatePlaceholder": "Startdatum auswählen",
+      "startDateRequired": "Bitte Startdatum auswählen",
+      "typ": "Abwesenheitskategorie",
+      "typPlaceholder": "Abwesenheitskategorie auswählen",
+      "typRequired": "Bitte Abwesenheitskategorie auswählen",
+      "verlassen": {
+        "modal": {
+          "cancel": "Abbrechen",
+          "submit": "Fortfahren",
+          "text": "Wenn Sie diese Seite verlassen, gehen die Änderungen verloren.",
+          "title": "Möchten Sie wirklich fortfahren?"
+        }
+      }
+    },
+    "overview": {
+      "abwesenheitstyp": {
+        "urlaub": "Urlaub",
+        "zeitausgleich": "Zeitausgleich"
+      },
+      "create": "Abwesenheit anlegen",
+      "delete": {
+        "message": {
+          "error": "Fehler beim Löschen der Abwesenheit",
+          "success": "Abwesenheit erfolgreich gelöscht"
+        },
+        "modal": {
+          "cancel": "Nein",
+          "submit": "Ja",
+          "text": "Möchten Sie diese Abwesenheit wirklich löschen?",
+          "title": "Bestätigen"
+        }
+      },
+      "edit": "Bearbeiten",
+      "error": {
+        "laden": "Fehler beim Laden der Abwesenheit"
+      },
+      "filter": {
+        "allStatus": "Alle Status",
+        "status": "Status auswählen",
+        "year": "Jahr auswählen"
+      },
+      "label": "Übersicht der Abwesenheiten",
+      "notification": {
+        "conflict": "Der Benutzer hat bereits eine Abwesenheit für diesen Zeitraum hinterlegt.",
+        "internalServerError": "Es gab einen Fehler bei der Übertragung zu LHR.",
+        "invalidData": "Die eingegebenen Daten sind nicht erlaubt.",
+        "refreshSuccessful": "Die Abwesenheit wurde erfolgreich aktualisiert."
+      },
+      "table": {
+        "aktion": "Aktion",
+        "dauerInTagenPrefix": "Dauer",
+        "dauerInTagenSuffix": "(in Tagen)",
+        "fuehrungskraftBemerkung": "Bemerkung (Führungskraft)",
+        "kategorie": "Kategorie",
+        "lhrCalculated": {
+          "tooltip": "Indikative Dauer. Mit der Beantragung wird die Dauer der Abwesenheit vom Lohnverrechnungssystem entsprechend deiner Arbeitszeiten neu berechnet und aktualisiert."
+        },
+        "mitarbeiterBemerkung": "Bemerkung (Mitarbeitende)",
+        "noData": "Derzeit keine Angaben vorhanden.",
+        "status": "Status",
+        "stornieren": "Stornieren",
+        "zeitraum": "Zeitraum",
+        "zuletztGeaendert": "Zuletzt geändert"
+      }
+    }
+  },
+  "umbuchung": {
+    "overview": {
+      "error": {
+        "eingabe": "Fehlende Eingabe.",
+        "keineDaten": "Es wurden keine Buchungsdaten geliefert.",
+        "laden": "Fehler beim Laden der Umbuchung."
+      },
+      "keineUeberstundenInfoText": "Derzeit sind keine Mehr-/Überstunden zur Auszahlung vorhanden.",
+      "label": "Umbuchung",
+      "required": {
+        "zurAuszahlung": {
+          "text": "Bitte geben Sie eine Zahl größer 0 an"
+        }
+      },
+      "save": "Umbuchung finalisieren",
+      "saveSuccess": "Die Daten wurden erfolgreich an LHR übermittelt.",
+      "saveError": "Es gab einen Fehler bei der Übertragung an LHR.",
+      "umbuchungUnavailable": "Derzeit kann keine Umbuchung für diesen Zeitraum durchgeführt werden.",
+      "umbuchungDone": "Die Umbuchung für diesen Zeitraum wurde bereits durchgeführt",
+      "table": {
+        "saldo": "Stunden unbewertet",
+        "stundenkonto": "Stundenkonto",
+        "zumZeitausgleich": "Zum Zeitausgleich",
+        "zurAuszahlung": "Zur Auszahlung"
+      },
+      "verlassen": {
+        "modal": {
+          "cancel": "Nein",
+          "submit": "Ja",
+          "text": "Nicht gespeicherte Änderungen gehen verloren. Möchten Sie wirklich fortfahren?",
+          "title": "Bestätigen"
+        }
+      }
+    }
+  },
+  "meineZeiten": {
+    "error": {
+      "fehlgeschlagen": "Die Anfrage für diesen Zeitraum ist fehlgeschlagen.",
+      "keinNachweis": "Für diesen Zeitraum gibt es keinen Nachweis."
+    },
+    "label": {
+      "aktuelleAnsicht": "Aktuelle Ansicht:",
+      "eintraegeFuer": "Einträge für:",
+      "ganztags": "Ganztags",
+      "headline": "Meine Zeiten",
+      "ibosAktualisieren": "Daten für den aktuellen Zeitraum aktualisieren",
+      "keineEintraege": "Keine Einträge gefunden",
+      "legend": {
+        "ausgewaehlt": "Ausgewählt",
+        "datenFehlerhaft": "Daten fehlerhaft",
+        "datenVorhanden": "Daten vorhanden",
+        "feiertag": "Wochenende & Feiertage"
+      },
+      "loadingError": "Die Einträge für diesen Zeitraum konnten nicht geladen werden.",
+      "statusDesMonats": {
+        "abgeschlossen": "Abgeschlossen",
+        "label": "Status des Monats:",
+        "offen": "Offen"
+      },
+      "umbuchungCta": "Jetzt erledigen",
+      "umbuchungDescription": "Für den ausgewählten Zeitraum sind Überstunden vorhanden. Vergiss nicht deine Umbuchung bis zum 10. des Folgemonats zu erledigen.",
+      "zeitnachweisHerunterladen": "Zeitnachweis Herunterladen",
+      "zuletztAktualisiert": "Daten zuletzt synchronisiert am "
+    }
+  },
+  "personalakt": {
+    "button": {
+      "closeAll": "Alle Einklappen",
+      "download": "Herunterladen",
+      "openAll": "Alle Ausklappen"
+    },
+    "error": {
+      "laden": "Fehler beim Laden des Personalakts"
+    },
+    "fileModal": {
+      "button": {
+        "download": "Herunterladen"
+      },
+      "error": {
+        "laden": "Fehler beim Laden der Datei"
+      },
+      "title": "Vorschau"
+    },
+    "label": "Personalakt",
+    "section": {
+      "alleDateien": "Alle Dateien",
+      "schnellZugriff": "Zuletzt erstellt"
+    }
+  },
+  "leistungenErfassen": {
+    "label": {
+      "abbrechen": "Abbrechen",
+      "bemerkung": "Bemerkung",
+      "bis": "Bis",
+      "datum": "Datum",
+      "ist": "Ist",
+      "kostentraeger": "Buchungselement",
+      "leistungBearbeiten": "Leistung bearbeiten",
+      "leistungErfassen": "Leistung erfassen",
+      "leistungsart": "Leistungsart",
+      "loeschen": "Löschen",
+      "monatsstatus": "Monatsstatus",
+      "ort": "Ort",
+      "pageTitle": "Leistungen erfassen",
+      "pauseBis": "Pause bis",
+      "pauseVon": "Pause von",
+      "seminarbucheintrag": "Seminarbucheintrag",
+      "soll": "Soll",
+      "speichern": "Speichern",
+      "taetigkeit": "Tätigkeit",
+      "von": "Von",
+      "wochenstunden": "Wochenstunden"
+    },
+    "placeholder": {
+      "bemerkung": "Bemerkung eingeben",
+      "datum": "Datum auswählen",
+      "kostentraeger": "Kostenstelle oder Projekt auswählen",
+      "leistungsart": "Leistungsart auswählen",
+      "ort": "Ort auswählen",
+      "seminarbucheintrag": "Bemerkung eingeben",
+      "taetigkeit": "Tätigkeit auswählen"
+    }
+  },
+  "abwesenheitenGenehmigen": {
+    "abwesenheitstyp": {
+      "urlaub": "Urlaub",
+      "zeitausgleich": "Zeitausgleich"
+    },
+    "error": {
+      "laden": {
+        "abwesenheit": "Fehler beim Laden der Abwesenheit",
+        "abwesenheiten": "Fehler beim Laden der Abwesenheiten"
+      }
+    },
+    "label": "Übersicht der Abwesenheitsanträge",
+    "placeholder": {
+      "status": "Alle status"
+    },
+    "message": {
+      "error": "Fehler beim Speichern des Abwesenheitsantrags",
+      "success": {
+        "approved": "Abwesenheitsantrag erfolgreich genehmigt",
+        "rejected": "Abwesenheitsantrag erfolgreich abgelehnt"
+      }
+    },
+    "modal": {
+      "abwesenheitstyp": {
+        "urlaub": "Urlaub",
+        "zeitausgleich": "Zeitausgleich"
+      },
+      "button": {
+        "approve": "Genehmigen",
+        "reject": "Ablehnen"
+      },
+      "commentFuehrungskraft": "Anmerkung",
+      "commentFuehrungskraftPlaceholder": "Anmerkung hinterlassen",
+      "commentMitarbeiter": "Anmerkung durch den/die Mitarbeitende",
+      "endDate": "Enddatum bis",
+      "restanspruch": "Verbraucht",
+      "startDate": "Startdatum von",
+      "title": "Abwesenheit prüfen",
+      "typ": "Abwesenheitskategorie"
+    },
+    "table": {
+      "bemerkung": "Bemerkung",
+      "dauerInTagen": "Dauer in Tagen",
+      "fullName": "Name",
+      "genehmigen": "Prüfen",
+      "kategorie": "Kategorie",
+      "status": "Status",
+      "zeitraum": "Zeitraum",
+      "zuletztGeaendert": "Zuletzt geändert"
+    }
+  },
+  "teilnehmer": {
+    "bearbeiten": {
+      "button": {
+        "abmelden": "ÜBA abmelden",
+        "bisHochladen": "Zum BIS hochladen",
+        "speichern": "Teilnehmendedaten speichern",
+        "teilnehmerOnboarding": "Teilnehmenden-Onboarding",
+        "zumErfassenFormular": "Zum Erfassen-Formular"
+      },
+      "error": {
+        "bisUpload": "Fehler beim Hochladen",
+        "defaultError": "Bitte dieses Feld überprüfen",
+        "noFileSelected": "Bitte eine Datei auswählen",
+        "noId": "Teilnehmende ID fehlt",
+        "ort": "Bitte dieses Feld überprüfen",
+        "plzOrtKombination": "Bitte die Kombination aus PLZ und Ort überprüfen",
+        "teilnehmerExistiertBereits": "Dieser/Diese Teilnehmende existiert bereits",
+        "teilnehmerLaden": "Fehler beim Laden des/der Teilnehmenden"
+      },
+      "label": {
+        "anmerkung": "Anmerkung",
+        "anmerkungEmpfehlung": "Anmerkungen und Empfehlung nächster Schritte",
+        "anrede": "Anrede",
+        "anteilAnwesenheit": "Anteil Anwesenheit",
+        "antritt": "Prüfungsantritt",
+        "antrittJa": "Ja",
+        "antrittNein": "Nein",
+        "ausbildungen": "Ausbildungen",
+        "ausbildungstyp": "Ausbildungstyp",
+        "austritt": "Austritt",
+        "austrittsgrund": "Austrittsgrund",
+        "backToOverview": "Zurück zur Übersicht",
+        "begehrenBis": "Begehren bis",
+        "begruendung": "Begründung",
+        "beruf": "Beruf",
+        "berufserfahrung": "Berufserfahrung",
+        "betreuer": "Betreuer",
+        "betreuer_nachname": "Betreuer Nachname",
+        "betreuer_vorname": "Betreuer Vorname",
+        "betreuerNachname": "Betreuende Nachname",
+        "betreuerTitel": "Betreuende Titel",
+        "betreuerVorname": "Betreuende Vorname",
+        "bewertungCoach": "Bewertung Coach",
+        "bewertungDatum": "Bewertung Datum",
+        "bezeichnung": "Bezeichnung",
+        "buchungsstatus": "Buchungsstatus",
+        "cancel": "Abbrechen",
+        "close": "Schließen",
+        "createdBy": "Erstellt von",
+        "createdOn": "Erstellt am",
+        "dauer": "Dauer",
+        "dauerInJahren": "Dauer (in Jahren)",
+        "delete": "Löschen",
+        "deleteAusbildung": "Ausbildung löschen",
+        "deleteAusbildungDescription": "Wollen Sie diese Ausbildung wirklich löschen?",
+        "deleteAusbildungSubmit": "Löschen",
+        "deleteBerufserfahrung": "Berufserfahrung löschen",
+        "deleteBerufserfahrungDescription": "Wollen Sie diese Berufserfahrung wirklich löschen?",
+        "deleteNotiz": "Notiz löschen",
+        "deleteNotizDescription": "Wollen Sie diese Notiz wirklich löschen?",
+        "deleteNotizSubmit": "Löschen",
+        "deletePruefung": "Prüfung löschen",
+        "deletePruefungDescription": "Wollen Sie diesen Prüfungseintrag wirklich löschen?",
+        "deletePruefungSubmit": "Löschen",
+        "deleteSprachkenntnis": "Sprachkenntnis löschen",
+        "deleteSprachkenntnisDescription": "Wollen Sie diese Sprachkenntnis wirklich löschen?",
+        "deleteSprachkenntnisSubmit": "Löschen",
+        "deleteZertifikat": "Zertifikat löschen",
+        "deleteZertifikatDescription": "Wollen Sie dieses Zertifikat wirklich löschen?",
+        "deleteZertifikatSubmit": "Löschen",
+        "detailansicht": "Detailansicht",
+        "einheit": "Einheit",
+        "eintritt": "Eintritt",
+        "email": "Email",
+        "endDate": "Enddatum",
+        "ergebnis": "Ergebnis",
+        "ergebnisInProzent": "Ergebnis in Prozent",
+        "erkanntInAt": "Anerkannt in Österreich",
+        "fortschritt": "Fortschritt",
+        "fruehwarnung": "Frühwarnung",
+        "geburtsdatum": "Geburtsdatum",
+        "geburtsort": "Geburtsort",
+        "gegenstand": "Gegenstand",
+        "geplant": "Geplant",
+        "gesamtbeurteilung": "Gesamtbeurteilung",
+        "gesamtbeurteilungErgebnis": "Ergebnis",
+        "gesamtbeurteilungTyp": "Typ",
+        "geschlecht": "Geschlecht",
+        "hinzufuegen": "Hinzufügen",
+        "hoechsterAbschluss": "Höchster Abschluss",
+        "institut": "Institut",
+        "jahre": "Jahre",
+        "kategorie": "Kategorie",
+        "keinTeilnehmer": "Kein/e Teilnehmnde/r gefunden.",
+        "kostentraeger": "Kostenträger",
+        "kursBis": "Kurs Datum bis",
+        "kursverlauf": "Kursverlauf - Notizen",
+        "kursVon": "Kurs Datum von",
+        "land": "Land",
+        "lernfortschritt": "Lernfortschritt",
+        "massnahmennummer": "Maßnahmennummer",
+        "monate": "Monate",
+        "muttersprache": "Muttersprache",
+        "nachname": "Nachname",
+        "nation": "Staatsbürgerschaft",
+        "niveau": "Niveau",
+        "notiz": "Notiz",
+        "notizen": "Notizen",
+        "ort": "Ort",
+        "personalnummerWurdeGeneriert": "Eine neue Personalnummer wurde generiert. Das Onboarding startet.",
+        "plz": "PLZ",
+        "plzOrtButton": "Beheben",
+        "projektbezeichnung": "Projektbezeichnung",
+        "projektId": "Projekt ID",
+        "pruefungAm": "Prüfung am",
+        "pruefungArt": "Art der Prüfung",
+        "pruefungen": "Prüfungen",
+        "pruefungHinzufuegen": "Prüfung hinzufügen",
+        "pruefungBearbeiten": "Prüfung bearbeiten",
+        "rgs": "RGS",
+        "rgsBezeichnung": "RGS-Bezeichnung",
+        "role": "Rolle",
+        "save": "Speichern",
+        "schieneUhrzeit": "Schiene-Uhrzeit",
+        "seminar": "Seminarbezeichnung",
+        "seminarBezeichnung": "Seminarbezeichnung",
+        "seminarDaten": "Seminardaten",
+        "seminarDetails": "Seminar Details",
+        "seminarId": "Seminar ID",
+        "seminarSchliesszeiten": "Seminarschließzeiten",
+        "sprache": "Sprache",
+        "sprachkenntnisse": "Sprachkenntnisse",
+        "staatsbuergerschaft": "Staatsbürgerschaft",
+        "standort": "Standort",
+        "startDate": "Startdatum",
+        "strasse": "Straße",
+        "sv_nummer": "SV Nummer",
+        "svnr": "SVNR",
+        "svNummer": "SVNR",
+        "telefon": "Telefon",
+        "telefonPrivat": "Telefon Privat",
+        "titel": "Titel",
+        "titel2": "Titel 2",
+        "trainer": "Trainer",
+        "typ": "Typ",
+        "ungewiss": "Ungewiss",
+        "ursprungsland": "Ursprungsland",
+        "veranstaltungsnummer": "Veranstaltungsnummer",
+        "vermittelbarAb": "Vermittelbar ab",
+        "vermittlungsnotiz": "Notiz",
+        "vorname": "Vorname",
+        "wunschberufe": "Wunschberufe",
+        "zertifikate": "Zertifikate",
+        "ziel": "Erläuterung Ziel",
+        "zubuchung": "Zubuchung",
+        "zusaetzlicheUnterstuetzung": "Angebot und Inanspruchnahme zusätzlicher Unterstützung"
+      },
+      "placeholder": {
+        "anmerkung": "Anmerkung eingeben",
+        "anmerkungEmpfehlung": "Anmerkung eingeben",
+        "anrede": "Anrede auswählen",
+        "anteilAnwesenheit": "Anteil eingeben",
+        "antritt": "Ungewiss",
+        "ausbildungstyp": "Ausbildungstyp",
+        "austritt": "Datum auswählen",
+        "austrittsgrund": "Grund eingeben",
+        "begehrenBis": "Datum auswählen",
+        "begruendung": "Begründung auswählen",
+        "betreuer": "Betreuer eingeben",
+        "betreuer_nachname": "Betreuer Nachname eingeben",
+        "betreuer_vorname": "Betreuer Vorname eingeben",
+        "betreuerNachname": "Nachname eingeben",
+        "betreuerTitel": "Titel eingeben",
+        "betreuerVorname": "Vorname eingeben",
+        "bewertungCoach": "Bewertung Coach",
+        "bezeichnung": "Bezeichnung eingeben",
+        "buchungsstatus": "Buchungsstatus eingeben",
+        "createdBy": "Erstellt von",
+        "createdOn": "Erstellt am",
+        "dauer": "Dauer in Jahren",
+        "eintritt": "Datum auswählen",
+        "email": "Email Adresse eingeben",
+        "ergebnis": "Ergebnis auswählen",
+        "ergebnisInProzent": "Prozent eingeben",
+        "erkanntInAt": "Anerkannt in Österreich",
+        "fruehwarnung": "Frühwarnung eingeben",
+        "geburtsdatum": "Geburtsdatum auswählen",
+        "geburtsort": "Geburtsort eingeben",
+        "gegenstand": "Gegenstand eingeben",
+        "geplant": "Datum auswählen",
+        "gesamtbeurteilungErgebnis": "Ergebnis auswählen",
+        "gesamtbeurteilungTyp": "Gegenstand auswählen",
+        "geschlecht": "Geschlecht auswählen",
+        "hoechsterAbschluss": "höchster Abschluss",
+        "institut": "Institut eingeben",
+        "kategorie": "Kategorie",
+        "kompetenzprofil": "Kompetenzprofil eingeben",
+        "lernfortschritt": "Lernfortschritt eingeben",
+        "massnahmennummer": "Maßnahmennummer eingeben",
+        "muttersprache": "Muttersprache eingeben",
+        "nachname": "Nachname eingeben",
+        "niveau": "Niveau auswählen",
+        "notiz": "Notiz eingeben",
+        "ort": "Wohnort eingeben",
+        "plz": "Postleitzahl eingeben",
+        "pruefungAm": "Datum auswählen",
+        "pruefungArt": "Prüfungsart eingeben",
+        "rgs": "RGS eingeben",
+        "rgsBezeichnung": "RGS-Bezeichnung eingeben",
+        "seminar": "Seminarbezeichnung eingeben",
+        "seminarBezeichnung": "Seminarbezeichnung eingeben",
+        "seminarSchliesszeiten": "Seminarschließzeiten eingeben",
+        "sprache": "Sprache",
+        "staatsbuergerschaft": "Staatsbürgerschaft auswählen",
+        "strasse": "Wohnadresse eingeben",
+        "sv_nummer": "Datum auswählen",
+        "svnr": "10-Stellige Sozialversicherungsnummer",
+        "telefonPrivat": "Telefon Privat eingeben",
+        "titel": "Titel auswählen",
+        "titel2": "Titel auswählen",
+        "typ": "Typ",
+        "ursprungsland": "Land auswählen",
+        "veranstaltungsnummer": "Veranstaltungsnummer eingeben",
+        "vermittelbarAb": "Datum auswählen",
+        "vermittlungsnotiz": "Notiz eingeben",
+        "vorname": "Vorname eingeben",
+        "ziel": "Ziel eingeben",
+        "zubuchung": "Datum auswählen",
+        "zusaetzlicheUnterstuetzung": "Beschreibung eingeben"
+      },
+      "pruefungTable": {
+        "artDerPruefung": "Art der Prüfung",
+        "begruendungNichtanmeldung": "Begründung Nichtanmeldung",
+        "bezeichnung": "Bezeichnung",
+        "ergebnis": "Ergebnis",
+        "ergebnisInProzent": "Ergebnis in Prozent",
+        "gegenstand": "Gegenstand",
+        "institut": "Institut",
+        "niveau": "Niveau",
+        "noResults": "Keine Prüfungen gefunden",
+        "pruefungAm": "Prüfung am",
+        "pruefungsantritt": "Prüfungsantritt"
+      },
+      "required": {
+        "email": {
+          "text": "E-Mail muss eine gültige E-Mail-Adresse sein"
+        },
+        "geburtsdatum": {
+          "altersbereich": "Teilnehmende müssen zwischen 13 und 80 Jahre alt sein",
+          "text": "Geburtsdatum ist ein Pflichtfeld",
+          "ungueltig": "Ungültiges Datum"
+        },
+        "geschlecht": {
+          "text": "Geschlecht ist ein Pflichtfeld"
+        },
+        "kompetenzprofil": {
+          "text": "Bitte eine Datei auswählen"
+        },
+        "nachname": {
+          "regex": "Nachname darf keine Zahlen enthalten",
+          "text": "Nachname ist ein Pflichtfeld"
+        },
+        "ort": {
+          "text": "Ort ist ein Pflichtfeld"
+        },
+        "plz": {
+          "text": "Bitte geben Sie eine korrekte PLZ ein"
+        },
+        "staatsbuergerschaft": {
+          "text": "Staatsbürgerschaft ist ein Pflichtfeld"
+        },
+        "strasse": {
+          "text": "Straße ist ein Pflichtfeld"
+        },
+        "svnr": {
+          "text": "SV-Nr. ist ein Pflichtfeld"
+        },
+        "telefonPrivat": {
+          "text": "Telefon Privat ist ein Pflichtfeld"
+        },
+        "vorname": {
+          "regex": "Vorname darf keine Zahlen enthalten",
+          "text": "Vorname ist ein Pflichtfeld"
+        }
+      },
+      "section": {
+        "amsDaten": "AMS Daten",
+        "arbeitszeit": "Arbeitszeit",
+        "gehalt": "Gehalt",
+        "kompetenzprofil": "Kompetenzprofil",
+        "kontaktdaten": "Kontaktdaten",
+        "persoenlicheDaten": "Persönliche Daten",
+        "seminardaten": "Seminardaten",
+        "vermittlungsdaten": "Vermittlungsdaten",
+        "vertragsdaten": "Vertragsdaten",
+        "wunschberufe": "Wunschberufe"
+      },
+      "success": {
+        "bisUpload": "Kompetenzprofil wurde erfolgreich hochgeladen",
+        "gespeichert": "Teilnehmende gespeichert"
+      },
+      "text": {
+        "kompetenzprofilBereitsHochgeladen": "Das Kompetenzprofil wurde hochgeladen.",
+        "teilnehmerAnlegen": "Teilnehmende anlegen",
+        "teilnehmerAnsehen": "Teilnehmende ansehen",
+        "teilnehmerBearbeiten": "Teilnehmende bearbeiten",
+        "teilnehmerKorrigieren": "Teilnehmende korrigieren"
+      },
+      "title": {
+        "ansehen": "Teilnehmende ansehen",
+        "bearbeiten": "Teilnehmende bearbeiten"
+      },
+      "trainerTable": {
+        "bezugsdauer": "Bezugsdauer",
+        "email": "Email",
+        "funktion": "Funktion",
+        "name": "Name",
+        "noResults": "Keine Trainer gefunden"
+      },
+      "verlassen": {
+        "modal": {
+          "cancel": "Nein",
+          "confirm": "Ja",
+          "text": "Nicht gespeicherte Änderungen gehen verloren. Möchten Sie wirklich fortfahren?",
+          "title": "Bestätigen"
+        }
+      }
+    },
+    "korrigieren": {
+      "pageTitle": "Teilnehmende korrigieren",
+      "edit": {
+        "button": {
+          "bearbeiten": "Bearbeiten",
+          "nochmalsUeberpruefen": "nochmals Überprüfen",
+          "plzUndOrtspeichernErzwingen": "PLZ und Ort Kombination: Speichern erzwingen",
+          "schliessen": "Schließen",
+          "speichernErzwingen": "PLZ und Ort Kombination: Speichern erzwingen",
+          "ueberpruefen": "Überprüfen"
+        },
+        "checkbox": {
+          "massnahmennummer": {
+            "prefix": "Seminare",
+            "suffix": "Maßnahmennummern"
+          }
+        },
+        "confirmModal": {
+          "cancel": "Abbrechen",
+          "no": "Abbrechen",
+          "save": "Ja, Seite verlassen",
+          "text": "Wenn Sie diese Seite verlassen, werden Änderungen verworfen.",
+          "titel": "Diese Seite verlassen",
+          "title": "Diese Seite verlassen",
+          "yes": "Ja, Seite verlassen"
+        },
+        "header": {
+          "bearbeiten": "Bearbeiten",
+          "fehlerhafteDaten": "Fehlerhafte Daten",
+          "massnahmennummer": "Maßnahmennummer",
+          "nachname": "Nachname",
+          "seminarbezeichnung": "Seminarbezeichnung",
+          "svnr": "SVNR",
+          "vorname": "Vorname"
+        },
+        "label": "Teilnehmende korrigieren",
+        "massnahmennummern": "Maßnahmennummern",
+        "message": {
+          "error": {
+            "save": {
+              "inputNichtErfolgreichValidiert": "Input nicht erfolgreich validiert",
+              "keinName": "Für eine Überprüfung eines ÖIF Imports müssen zwingend Vorname und Nachname erfasst sein",
+              "keinNameOderSvnr": "Sowohl Vor- als auch Nachname oder alternativ die SV Nummer müssen erfasst sein für eine Überprüfung",
+              "unbekannt": "unbekannter Fehler bitte die App neuladen"
+            },
+            "update": "das Seminar kann nicht gefunden werden, bitten noch einmal probieren"
+          },
+          "success": {
+            "informationenAngepasst": "Informationen erfolgreich angepasst",
+            "informationenAngepasstAberNichtVollstaendig": "Informationen erfolgreich angepasst, aber noch nicht vollständig",
+            "keineFehlerhaftenTeilnehmer": "keine fehlerhaften Teilnehmenden für dieses Seminar"
+          }
+        },
+        "seminare": "Seminare",
+        "titel": "Fehlerhafte Teilnehmendendaten",
+        "title": {
+          "fehlerhafteTeilnehmer": "Fehlerhafte Teilnehmendendaten"
+        }
+      }
+    },
+    "onboarding": {
+      "title": "Teilnehmenden-Onboarding"
+    },
+    "verwalten": {
+      "button": {
+        "anlegen": "Teilnehmende anlegen",
+        "bearbeiten": "Bearbeiten",
+        "filter": "Filter",
+        "reset": "Zurücksetzen",
+        "schliessen": "Schliessen",
+        "suchen": "Suchen"
+      },
+      "checkbox": {
+        "active": {
+          "prefix": "aktiv"
+        }
+      },
+      "dropdownOption": {
+        "alleProjekte": "Alle Projekte",
+        "alleSeminare": "Alle Seminare"
+      },
+      "export": {
+        "button": {
+          "csv": "Tabellarisch (csv)",
+          "xlsx": "Excel (xlsx)"
+        },
+        "export": "Exportieren als"
+      },
+      "label": {
+        "downloadButton": "Suchergebnis herunterladen",
+        "isActiveFalse": "Nur inaktive Projekte & Seminare",
+        "isActiveTrue": "Nur aktive Projekte & Seminare",
+        "isAngemeldetFalse": "Keine angemeldeten Seminare",
+        "isAngemeldetTrue": "Nur angemeldete Seminare",
+        "seminarzuweiseungAuswaehlen": "Seminarzuweisung auswählen",
+        "seminarzuweiseungInfo": "Es wurden mehrere Seminare zu dieser/diesem Teilnehmenden gefunden. Bitte wähle das Seminar, dass du in Beziehung zu dem Teilnehmer bearbeiten möchtest."
+      },
+      "placeholder": {
+        "isActive": "Alle Projekte & Seminare",
+        "isAngemeldet": "Alle Seminare"
+      },
+      "select": {
+        "geschlecht": "Geschlecht auswählen",
+        "massnahmennummer": "Maßnahmennummer",
+        "projekt": "Projekt auswählen",
+        "seminar": "Seminar auswählen",
+        "uebaTeilnehmer": "ÜBA-TN"
+      },
+      "suche": {
+        "platzhalter": "Teilnehmendenname oder SVNR eingeben"
+      },
+      "table": {
+        "angemeldetIn": "Angemeldet in",
+        "ansehen": "Ansehen",
+        "bearbeiten": "Bearbeiten",
+        "errors": "Fehlerhafte Felder",
+        "isEmpty": "Keine Teilnehmenden gefunden.",
+        "land": "Land",
+        "massnahmennummern": "Maßnahmennummer",
+        "nachname": "Nachname",
+        "ort": "Ort",
+        "plz": "PLZ",
+        "seminarNamen": "Seminarbezeichnung",
+        "svnr": "SVNR",
+        "ueba": "Ueba & Valid",
+        "vorname": "Vorname"
+      },
+      "title": "Teilnehmende verwalten",
+      "uebaTeilnehmerOption": {
+        "all": "Alle Teilnehmer",
+        "only_non_ueba": "Keine ÜBA-Teilnehmer",
+        "only_ueba": "Nur ÜBA-Teilnehmer"
+      }
+    }
+  },
+  "teilnehmerAustritte": {
+    "anlegen": {
+      "austrittsDatum": "Austrittsdatum",
+      "austrittsgrund": "Austrittsgrund",
+      "austrittsgrundType": {
+        "afl1": "§ 14/1: Lehrvertrag endet ohne absolvierte LAP",
+        "afl10": "§ 15a/3 (e): Kündigung durch DG – unerlaubtes Verlassen des Lehrplatzes",
+        "afl11": "§ 15a/3 (f): Kündigung durch DG – Berufsunfähigkeit des Lehrlings",
+        "afl12": "§ 15a/4 (a): Kündigung durch Lehrling – gesundheitliche Gründe",
+        "afl13": "§ 15a/4 (b): Kündigung durch Lehrling – Pflichtverletzung oder Gesetzesverstöße des DG",
+        "afl14": "§ 15a/4 (g): Kündigung durch Lehrling – Aufgabe des Lehrberufs",
+        "afl15": "§ 15a/5: Einvernehmliche Auflösung",
+        "afl2": "§ 14/2 (a): Lehrvertrag endet bei Tod des Lehrlings",
+        "afl3": "§ 14/2 (e): Lehrvertrag endet bei positiver LAP",
+        "afl4": "§ 15a/1 (TN): Probezeitlösung durch den Lehrling",
+        "afl5": "§ 15a/1 (DG): Probezeitlösung durch den Dienstgeber",
+        "afl6": "§ 15a/3 (a): Kündigung durch DG – strafbare Handlungen des Lehrlings",
+        "afl7": "§ 15a/3 (b): Kündigung durch DG – gefährliche Drohung oder Gesetzesverstöße",
+        "afl8": "§ 15a/3 (c): Kündigung durch DG – Pflichtverletzung des Lehrlings",
+        "afl9": "§ 15a/3 (d): Kündigung durch DG – Verrat von Geschäftsgeheimnissen"
+      },
+      "bemerkung": "Bemerkung",
+      "cancel": "Abbrechen",
+      "create": "Abmeldung anlegen",
+      "edit": "Abmeldung speichern",
+      "error": {
+        "save": "Anfrage für den Austritt fehlgeschlagen."
+      },
+      "label": "ÜBA abmelden",
+      "message": {
+        "success": {
+          "save": "Austritt erfolgreich gespeichert"
+        }
+      },
+      "placeholder": {
+        "austrittsDatum": "Austrittsdatum auswählen",
+        "austrittsgrund": "Austrittsgrund auswählen",
+        "bemerkung": "Bemerkung hinzufügen",
+        "teilnehmer": "Geben Sie min. 4 Zeichen des Nachnames oder die SV-Nr. ein"
+      },
+      "required": {
+        "austrittsDatum": "Bitte ein Austrittsdatum auswählen",
+        "austrittsgrund": "Bitte ein Austrittsgrund auswählen",
+        "teilnehmer": "Bitte einen Teilnehmenden auswählen"
+      },
+      "teilnehmer": "Angaben zur/zum Teilnehmenden",
+      "verlassen": {
+        "modal": {
+          "cancel": "Nein",
+          "submit": "Ja",
+          "text": "Nicht gespeicherte Änderungen gehen verloren. Möchten Sie wirklich fortfahren?",
+          "title": "Bestätigen"
+        }
+      }
+    },
+    "bearbeiten": {
+      "error": {
+        "laden": "Fehler beim Laden der ÜBA-Abmeldung"
+      },
+      "label": "ÜBA-Abmeldung bearbeiten"
+    },
+    "overview": {
+      "create": "ÜBA abmelden",
+      "edit": "Bearbeiten",
+      "error": {
+        "laden": "Fehler beim Laden der Austritte"
+      },
+      "label": "Übersicht der Austritte",
+      "status": {
+        "abgemeldet": "Abgemeldet",
+        "abmeldung": "Abmeldung bei LV",
+        "entwurf": "Entwurf",
+        "fehlerhaft": "Fehlerhaft",
+        "noStatus": "Kein Status"
+      },
+      "table": {
+        "austritt": "Austrittsdatum",
+        "bearbeiten": "Bearbeiten",
+        "kostenstelle": "Kostenstelle",
+        "nachname": "Nachname",
+        "status": "Status",
+        "svnr": "SV Nummer",
+        "vorname": "Vorname"
+      }
+    }
+  },
+  "abwesenheitenUebertragen": {
+    "create": {
+      "abort": "Abbrechen",
+      "comment": "Anmerkung",
+      "commentPlaceholder": "Anmerkung hinterlassen",
+      "dateFrom": "Datum von:",
+      "dateFromPlaceholder": "Datum auswählen",
+      "dateTo": "Datum bis:",
+      "dateToPlaceholder": "Datum auswählen",
+      "detail": {
+        "abort": "Abbrechen",
+        "participants": "Anzahl der Teilnehmenden",
+        "submit": "Übertragung starten",
+        "table": {
+          "header": {
+            "name": "Bezeichnung",
+            "number": "Nummer"
+          }
+        },
+        "timeFrame": "Zeitraum",
+        "user": "User"
+      },
+      "errors": {
+        "datumBis": "'Datum bis' ist ein Pflichtfeld",
+        "datumBisGreater": "'Datum bis' muss größer als 'Datum von' sein",
+        "datumVon": "'Datum von' ist ein Pflichtfeld",
+        "seminare": "Es muss mindestens ein Seminar ausgewählt werden"
+      },
+      "infoText": "Dieses Formular dient zur Übertragung der An- und Abwesenheiten aller ÜBA-Teilnehmenden an die Lohnverrechnung (LHR), entsprechend des ausgewählten Zeitraums und der ausgewählten Seminare.",
+      "label": "An-/Abwesenheiten übermitteln",
+      "overview": "Übersicht der Übertragung",
+      "resetSeminars": "Seminare zurücksetzen",
+      "selectAllSeminars": "Alle Seminare auswählen",
+      "seminarName": "Seminare",
+      "seminarNamePlaceholder": "Seminare auswählen",
+      "showOverview": "Daten prüfen"
+    },
+    "overview": {
+      "create": "An-/Abwesenheiten übertragen",
+      "label": "Teilnehmende An-/Abwesenheiten übermitteln",
+      "overviewLabel": "Übertragungen",
+      "table": {
+        "header": {
+          "lastChanged": "Zuletzt kommuniziert",
+          "seminars": "Seminare",
+          "status": "Status",
+          "timeFrame": "Zeitraum",
+          "user": "User"
+        },
+        "status": {
+          "canceled": "Abgebrochen",
+          "completed": "Vollständig",
+          "error": "Fehler",
+          "in_progress": "In Arbeit",
+          "invalid": "Inkorrekte Eingabe",
+          "new": "Neu",
+          "partially_completed": "Teilweise erfolgreich",
+          "rejected": "Abgelehnt",
+          "valid": "Korrekt"
+        }
+      }
+    }
+  },
+  "anwesenheitenVerwalten": {
+    "overview": {
+      "pageTitle": "Teilnehmende Anwesenheiten verwalten"
+    },
+    "label": {
+      "aktiv": "Aktiv",
+      "ja": "Ja",
+      "keine": "Keine",
+      "kursEndeFrom": "Kursende von",
+      "kursEndeTo": "Kursende bis",
+      "nein": "Nein",
+      "nichtAktiv": "Nicht aktiv",
+      "projekt": "Projekt",
+      "seminar": "Seminar",
+      "suchen": "Suchen",
+      "tage": "Tage",
+      "tooltipEmail": "Email",
+      "tooltipName": "Name",
+      "tooltipTel": "Tel.",
+      "verzoegerung": "Verzoegerung",
+      "zuruecksetzen": "Zurücksetzen",
+      "noRoleDescription": "Die Berechtigung für die Einsicht in die Übersicht fehlt."
+    },
+    "placeholder": {
+      "aktiv": "Alle",
+      "kursEndeFrom": "Datum auswählen",
+      "kursEndeTo": "Datum auswählen",
+      "projekt": "Projekt auswählen",
+      "seminar": "Seminar auswählen",
+      "verzoegerung": "Alle"
+    },
+    "table": {
+      "bearbeiten": "Bearbeiten",
+      "ansehen": "Ansehen",
+      "bis": "Bis",
+      "keineEintraege": "Keine Einträge gefunden",
+      "projekt": "Projekt",
+      "seminar": "Seminar",
+      "standort": "Standort",
+      "trainer": "Trainer",
+      "verzoegerung": "Verzoegerung",
+      "von": "Von",
+      "zuletztGeaendert": "Zuletzt geändert"
+    },
+    "detail": {
+      "label": {
+        "draft": "Entwurf",
+        "confirmed": "Bestätigt",
+        "anwesend": "AN (Anwesend)",
+        "changeDescription": "Zuletzt geändert von {changedBy} am",
+        "bestaetigen": "Liste bestätigen",
+        "nichtEntschuldigt": "NE (Nicht entschuldigt)",
+        "projekt": "Projekt",
+        "seminar": "Seminar",
+        "infoTitle": "Zusatzinformation",
+        "infoDescripton": "Hier kannst du zusätzliche Informationen zu dem Anwesenheitsstatus hinterlegen.",
+        "sonstige": "Sonstige",
+        "schliessen": "Schließen",
+        "noRoleDescription": "Die Berechtigung für die Einsicht in die Ansicht fehlt.",
+        "abbrechen": "Abbrechen"
+      },
+      "status": {
+        "Ausl": "Auslandsaufenthalt",
+        "B": "B (Berufschulbesuch)",
+        "E": "E (Entschuldigt)",
+        "F": "F (Frei)",
+        "FE": "FE (Ferien)",
+        "G": "G (Gruppentag)",
+        "K": "K (Krank ohne Beleg)",
+        "KSB": "KSB (Krankenstand mit Bestätigung)",
+        "PF": "PF (Pflegefreistellung)",
+        "P": "P (Praktikum)",
+        "PD": "PD (Präsenzdienstübung)",
+        "S": "S (Schnuppern)",
+        "SO": "SO (Selbstorganisation)",
+        "U": "U (Urlaub)",
+        "V": "V (Vorstellungstermin)",
+        "ZE": "ZE (Zeitausgleich)",
+        "X": "AN (Anwesend)",
+        "NE": "NE (Nicht entschuldigt)"
+      },
+      "placeholder": {
+        "sonstige": "Status auswählen",
+        "info": "Bemerkung"
+      },
+      "table": {
+        "abwesenheitAnlegen": "Abw. anlegen",
+        "an": "AN",
+        "anlegen": "Anlegen",
+        "anwesenheit": "Kurs Anw.",
+        "bearbeiten": "Bearbeiten",
+        "geburtsDatum": "Geb. Datum",
+        "info": "Info",
+        "nachname": "Nachname",
+        "ne": "NE",
+        "status": "Status",
+        "vorname": "Vorname"
+      },
+      "title": "Anwesenheiten Teilnahmeliste"
+    }
+  },
+  "mitarbeiter": {
+    "bearbeiten": {
+      "changelog": {
+        "label": {
+          "maCreated": "hat eine/n Mitarbeitende/n angelegt.",
+          "stammdatenBearbeitet": "hat die Stammdaten bearbeitet:",
+          "vertragsdatenBearbeitet": "hat die Vertragsdaten bearbeitet:"
+        }
+      },
+      "label": {
+        "ansehen": "Mitarbeitendedaten ansehen",
+        "bearbeiten": "Mitarbeitendedaten bearbeiten",
+        "changelog": "Changelog",
+        "projekteSeminare": "Projekte & Seminare",
+        "stammdaten": "Stammdaten",
+        "vertragsdaten": "Vertragsdaten",
+        "speichern": "Speichern",
+        "abbrechen": "Abbrechen",
+        "bestaetigungDatenaenderung": "Bestätigung zur Datenänderung",
+        "zusaetze": "Zusätze"
+      },
+      "projekteSeminare": {
+        "label": {
+          "noRoleDescription": "Die Berechtigung für die Einsicht in die Projekte & Seminare fehlt.",
+          "projekte": "Projekte",
+          "seminare": "Seminare"
+        }
+      },
+      "stammdaten": {
+        "error": {
+          "noStammdaten": "Der/Die Mitarbeitende, den/die Sie versucht haben aufzurufen, wurde nicht gefunden."
+        },
+        "info": {
+          "noRoleDescription": "Die Berechtigung für die Einsicht in die Stammdaten fehlt.",
+          "preSaveNotification": "Bitte beachte dass die Daten Auswirkungen auf geschäftskritische Prozesse (z.B. die Lohnabrechnung) haben können. Gehe beim Bearbeiten der Daten besonders sorgfältig vor und ändere auf diesem Bildschirm nur das absolut Notwendige."
+        },
+        "link": {
+          "backToOverview": "Zurück zur Übersicht"
+        },
+        "message": {
+          "success": "Stammdaten erfolgreich gespeichert"
+        }
+      },
+      "vertragsdaten": {
+        "error": {
+          "noVertragsdaten": "Der/die Mitarbeitende, den/die Sie versucht haben aufzurufen, wurde nicht gefunden."
+        },
+        "info": {
+          "noRoleDescription": "Die Berechtigung für die Einsicht in die Vertragsdaten fehlt.",
+          "preSaveNotification": "Bitte beachte dass die Daten Auswirkungen auf geschäftskritische Prozesse (z.B. die Lohnabrechnung) haben können. Gehe beim Bearbeiten der Daten besonders sorgfältig vor und ändere auf diesem Bildschirm nur das absolut Notwendige."
+        },
+        "link": {
+          "backToOverview": "Zurück zur Übersicht"
+        },
+        "message": {
+          "success": "Vertragsdaten erfolgreich gespeichert"
+        }
+      },
+      "zusatz": {
+        "label": {
+          "aenderungen": "Änderungen:",
+          "bearbeiten": "Bearbeiten",
+          "bemerkung": "Bemerkung:",
+          "gueltigAb": "Gültig ab:",
+          "linkZumDokument": "Link zum Zusatzdokument:",
+          "neuerZusatz": "Neuer Zusatz",
+          "vorschauOeffnen": "Vorschau Öffnen",
+          "zusatzVom": "Zusatz vom"
+        }
+      }
+    },
+    "erfassen": {
+      "anlegen": {
+        "errorMessages": {
+          "firma": "Bitte eine Firma wählen."
+        },
+        "firma": "Firma",
+        "firmaAuswaehlen": "Firma auswählen",
+        "infoText": "Beim Anlegen einer/eines neuen Mitarbeitenden wird eine neue Personalnummer generiert.",
+        "mitarbeiterAnlegen": "Mitarbeitende anlegen",
+        "mitarbeiterWurdeAngelegt": "Ein neuer Mitarbeiter wurde angelegt."
+      },
+      "button": {
+        "herunterladen": "Herunterladen",
+        "loeschen": "Löschen",
+        "vorschau": "Vorschau",
+        "hochladen": "Hochladen",
+        "stammdaten": "Stammdaten",
+        "vertragsdaten": "Vertragsdaten"
+      },
+      "checkbox": {
+        "prefix": "Ja",
+        "suffix": "Nein"
+      },
+      "confirmModal": {
+        "ja": "Ja",
+        "nein": "Nein",
+        "text": "Sie haben ungespeicherte Änderungen. Möchten Sie wirklich fortfahren?",
+        "title": "Bestätigen"
+      },
+      "error": {
+        "feldErforderlich": "Dieses Feld ist erforderlich"
+      },
+      "form": {
+        "button": {
+          "save": {
+            "label": "Speichern"
+          }
+        },
+        "checkbox": {
+          "prefix": "Nein",
+          "suffix": "Ja"
+        },
+        "message": {
+          "error": {
+            "dateiZugross": {
+              "text": "Datei überschreitet die Größe von 10 MB"
+            },
+            "erforderlich": {
+              "text": "Dieses Feld ist erforderlich"
+            },
+            "text": "Validierung fehlgeschlagen",
+            "ungueltig": {
+              "text": "Ungültige Eingabe"
+            },
+            "vonVorBis": {
+              "text": "Von-Datum muss vor Bis-Datum sein"
+            }
+          }
+        },
+        "text": {
+          "download": "Download",
+          "herunterladen": "Datei herunterladen",
+          "hinzufuegen": "Hinzufügen",
+          "hochladen": "Upload"
+        }
+      },
+      "lohnverrechnungInformieren": {
+        "labels": {
+          "info": "Vergewissern Sie sich dass die Personaldaten korrekt sind. Nach Bestätigung werden die Daten zur Prüfung an die Lohnverrechnung weitergeleitet.",
+          "keineRechte": "Ihnen fehlen die Rechte um diesen Prozess zu starten.",
+          "keineRechteTitle": "Fehlende rechte",
+          "start": "Lohnverrechnung informieren",
+          "title": "Lohnverrechnung informieren"
+        }
+      },
+      "lvAcceptance": {
+        "button": {
+          "speichern": "Speichern"
+        },
+        "checkbox": {
+          "prefix": "Nein",
+          "suffix": "Ja"
+        },
+        "download": {
+          "arbeitsgenehmigungDok": "Arbeitserlaubnis herunterladen",
+          "debitkarte": "Debitkarte herunterladen",
+          "ecard": "E-Card herunterladen"
+        },
+        "label": {
+          "akzeptiert": "Akzeptiert",
+          "bemerkung": "Bemerkung"
+        },
+        "message": {
+          "success": "Mitarbeitendedaten erfolgreich geprüft"
+        },
+        "notRequired": "Nicht erforderlich",
+        "required": {
+          "arbeitsgenehmigungDokReason": "Dieses Feld ist erforderlich",
+          "bankcardReason": "Dieses Feld ist erforderlich",
+          "ecardReason": "Dieses Feld ist erforderlich",
+          "gehaltEinstufungReason": "Dieses Feld ist erforderlich"
+        },
+        "section": {
+          "arbeitsgenehmigung": "Arbeitserlaubnis",
+          "debitkarte": "Debitkarte",
+          "ecard": "E-Card",
+          "gehaltEinstufung": "Gehalt und Einstufung"
+        }
+      },
+      "navigator": {
+        "step": {
+          "datenAnLhr": {
+            "label": "Daten an LHR übergeben"
+          },
+          "datenAnMoxis": {
+            "label": "Daten an Moxis übergeben"
+          },
+          "dienstvertragErstellen": {
+            "label": "Dienstvertrag erstellen"
+          },
+          "kvEinstufung": {
+            "berechnen": "berechnen",
+            "berechnet": "berechnet",
+            "label": "KV Einstufung"
+          },
+          "lohnverrechnung": {
+            "completed": "Daten durch Lohnverrechnung vollständig",
+            "error": "Prüfung durch Lohnverrechnung negativ",
+            "inProgress": "Prüfung durch Lohnverrechnung angefordert",
+            "new": "Prüfung durch Lohnverrechnung"
+          },
+          "lvInformieren": {
+            "informieren": "informieren",
+            "informiert": "informiert",
+            "label": "Lohnverrechnung"
+          },
+          "optional": {
+            "pruefungLv": {
+              "completed": "erledigt",
+              "error": "Überarbeitung der Daten bei HR angefordert",
+              "inProgress": "Angefordert",
+              "new": "wartet"
+            },
+            "sonstiger": {
+              "completed": "Erledigt",
+              "error": "Fehlgeschlagen",
+              "inArbeit": "In Arbeit",
+              "new": "wartet"
+            },
+            "stammdatenVertragsdaten": {
+              "completed": "erledigt",
+              "error": "Validierung fehlgeschlagen",
+              "inProgress": "In Arbeit",
+              "new": "Warte auf Eingabe"
+            }
+          },
+          "stammdaten": {
+            "erfassen": "erfassen",
+            "erfasst": "erfasst",
+            "label": "Stammdaten"
+          },
+          "unterschriebeneDokumente": {
+            "label": "Unterschriebene Dokumente speichern"
+          },
+          "unterschriftenlaufDurchfuehren": {
+            "label": "Unterschriftenlauf durchführen"
+          },
+          "unterschriftenlaufStarten": {
+            "label": "Unterschriftenlauf starten"
+          },
+          "vertragsdaten": {
+            "erfassen": "erfassen",
+            "erfasst": "erfasst",
+            "label": "Vertragsdaten"
+          }
+        },
+        "text": {
+          "am": "am",
+          "durch": "durch"
+        }
+      },
+      "pruefungLvStep": {
+        "button": {
+          "dateiAnsehen": "Datei ansehen",
+          "save": "Speichern"
+        },
+        "checkbox": {
+          "arbeitserlaubnis": {
+            "prefix": "Ja",
+            "suffix": "Nein"
+          }
+        },
+        "label": {
+          "nichtErforderlich": "nicht erforderlich"
+        },
+        "message": {
+          "error": {
+            "required": "Dieses Feld ist erforderlich"
+          }
+        }
+      },
+      "stammdaten": {
+        "button": {
+          "anlegen": "Mitarbeitende anlegen",
+          "generieren": "Generieren",
+          "speichern": "Speichern"
+        },
+        "checkbox": {
+          "prefix": "Nein",
+          "suffix": "Ja"
+        },
+        "description": {
+          "arbeitsbereitschaft": "Hier wird hinterlegt in welchen Bundesländern der/die Mitarbeitende bereit ist zu arbeiten.",
+          "handySignatur": "Der/Die Mitarbeitende kann Handysignatur nutzen"
+        },
+        "label": {
+          "aland": "Land",
+          "alter": "Alter",
+          "anrede": "Anrede",
+          "aort": "Ort",
+          "aplz": "PLZ",
+          "arbeitsgenehmigung": "Arbeitsgenehmigung",
+          "arbeitsgenehmigungDok": "Arbeitsgenehmigung (Dokument)",
+          "astrasse": "Straße",
+          "bank": "Bank",
+          "bankcard": "Debit Karte",
+          "bic": "BIC",
+          "burgenland": "Burgenland",
+          "ecard": "E-Card",
+          "email": "Email",
+          "familienstand": "Familienstand",
+          "firma": "Firma",
+          "foto": "Foto",
+          "geburtsDatum": "Geburtsdatum",
+          "geburtsname": "Geburtsname",
+          "geschlecht": "Geschlecht",
+          "gueltigBis": "Gültig bis",
+          "handySignatur": "Handysignatur",
+          "iban": "IBAN",
+          "kaernten": "Kärnten",
+          "land": "Land",
+          "mobilnummer": "Mobilnummer",
+          "muttersprache": "Erstsprache",
+          "nachname": "Nachname",
+          "niederoesterreich": "Niederösterreich",
+          "oberoesterreich": "Oberösterreich",
+          "ort": "Ort",
+          "personalnummer": "Personalnummer",
+          "plz": "PLZ",
+          "plzOrtButton": "Beheben",
+          "salzburg": "Salzburg",
+          "staatsbuergerschaft": "Staatsbürgerschaft",
+          "steiermark": "Steiermark",
+          "strasse": "Straße",
+          "svnr": "SV-Nr.",
+          "tirol": "Tirol",
+          "titel": "Titel",
+          "titel2": "Titel 2",
+          "vorarlberg": "Vorarlberg",
+          "vorname": "Vorname",
+          "wien": "Wien"
+        },
+        "message": {
+          "error": {
+            "required": "Dieses Feld ist erforderlich"
+          },
+          "success": "Stammdaten erfolgreich gespeichert"
+        },
+        "placeholder": {
+          "aland": "Land auswählen",
+          "anrede": "Anrede auswählen",
+          "aort": "Wohnort eingeben",
+          "aplz": "Postleitzahl eingeben",
+          "arbeitsgenehmigung": "Arbeitsgenehmigung auswählen",
+          "arbeitsgenehmigungDok": "Scan von Arbeitsgenehmigung",
+          "astrasse": "Wohnadresse eingeben",
+          "bank": "Bankname hinterlegen",
+          "bankcard": "Foto von Debit Karte hinterlegen",
+          "bic": "Bank Identifier Code hinterlegen",
+          "ecard": "E-Card Hochladen",
+          "email": "Email Adresse eingeben",
+          "familienstand": "Familienstand auswählen",
+          "foto": "Foto",
+          "geburtsDatum": "Geburtsdatum auswählen",
+          "geburtsname": "Geburtsname eingeben",
+          "geschlecht": "Geschlecht auswählen",
+          "gueltigBis": "Gültigkeitsdatum auswählen",
+          "iban": "IBAN hinterlegen",
+          "land": "Land auswählen",
+          "mobilnummer": "Telefonnummer hinterlegen",
+          "muttersprache": "Erstsprache eingeben",
+          "nachname": "Nachname eingeben",
+          "ort": "Wohnort eingeben",
+          "plz": "Postleitzahl eingeben",
+          "staatsbuergerschaft": "Staatsbürgerschaft auswählen",
+          "strasse": "Wohnadresse eingeben",
+          "svnr": "10-Stellige Sozialversicherungsnummer",
+          "titel": "Titel auswählen",
+          "titel2": "Titel auswählen",
+          "vorname": "Vorname eingeben"
+        },
+        "plzOrt": {
+          "cancel": "Abbrechen",
+          "message": {
+            "error": "Beim Speichern der Zuordnung von Postleitzahl und Ort ist ein Fehler aufgetreten.",
+            "success": "Die Zuordnung von Postleitzahl und Ort wurde erfolgreich gespeichert"
+          },
+          "save": "Speichern",
+          "text": "Möchten Sie die Zuordnung von Postleitzahl <strong>{plz}</strong> zu dem Ort <strong>{ort}</strong> dauerhaft im System speichern?",
+          "title": "Fehler bei der PLZ-Ort Zuordnung Beheben"
+        },
+        "section": {
+          "abweichendePostadresse": "Abweichende Postadresse",
+          "arbeitsbereitschaft": "Arbeitsbereitschaft nach Bundesland",
+          "arbeitsgenehmigung": "Arbeitsgenehmigung",
+          "bankdaten": "Bankdaten",
+          "kontaktdaten": "Kontaktdaten",
+          "personendaten": "Personendaten",
+          "zusatzinfo": "Zusatzinfo"
+        },
+        "title": "Stammdaten erfassen"
+      },
+      "step": {
+        "placeholder": {
+          "am": "am",
+          "duchgefuehrtDurch": "Erfolgreich durchgeführt durch",
+          "fehlgeschlagenDurch": "Fehlgeschlagen durch",
+          "inArbeit": "In Arbeit",
+          "wartet": "Wartet"
+        },
+        "unterschriftenlauf": {
+          "button": {
+            "abbrechen": "Abbrechen"
+          },
+          "erfolgreich": "Erfolgreich durchgeführt",
+          "errorStatus": {
+            "cancelled": "Der Unterschriftenlauf wurde abgebrochen.",
+            "error": "Ein technischer Fehler ist aufgetreten.",
+            "signature_denied": "Der Unterschriftenlauf wurde abgelehnt.",
+            "timeout": "Der Unterschriftenlauf ist abgelaufen."
+          },
+          "inArbeit": "In Arbeit",
+          "text": {
+            "inArbeit": "Der Unterschriftenlauf ist bereits in Arbeit. Sie können abbrechen durch Klick auf den Abbrechen Button oder warten bis der Prozess vollständig ist."
+          },
+          "timestamp": "Uhrzeit"
+        }
+      },
+      "text": {
+        "herunterladen": "Datei herunterladen",
+        "speichern": "Speichern"
+      },
+      "title": {
+        "adAndIbosUser": "AD & ibos User anlegen",
+        "datenAnLhr": "Daten an LHR übergeben",
+        "datenAnMoxis": "Daten an Moxis übermitteln",
+        "dienstvertrag": "Dienstvertrag erstellen",
+        "ibosNgUser": "IbosNG User anlegen",
+        "keinStatus": "Kein Status verfügbar",
+        "kvEinstufung": "KV-Einstufung berechnen",
+        "lohnverrechnung": "Lohnverrechnung informieren",
+        "mitarbeiterdaten": "Mitarbeitendendaten prüfen",
+        "navigator": "Navigator",
+        "neuenMaAnlegen": "Neue Mitarbeitende anlegen",
+        "unterschriebeneDokumente": "Unterschriebene Dokumente speichern",
+        "unterschriftenlaufDurchfuehren": "Unterschriftenlauf durchführen",
+        "unterschriftenlaufStarten": "Unterschriftenlauf starten",
+        "userAnlage": "User Anlage beauftragen"
+      },
+      "unterschriftenlaufDurchfuehren": {
+        "cancel": "Abbrechen",
+        "message": {
+          "error": "Fehler beim Abbrechen des Unterschriftenlaufprozesses",
+          "success": "Unterschriftenlauf erfolgreich abgebrochen"
+        }
+      },
+      "unterschriftenlaufStarten": {
+        "error": {
+          "laden": "Fehler beim Laden des Pdfs"
+        },
+        "info": "Beim Klick auf \"Unterschriftenlauf starten\" wird der Dienstvertrag zur Unterschrift freigegeben.",
+        "start": "Unterschriftenlauf starten",
+        "success": "Unterschriftenlauf erfolgreich gestartet.",
+        "vorschau": "Vorschau des Dienstvertrags"
+      },
+      "validate": {
+        "message": {
+          "success": {
+            "stammdaten": "Alle Vertragsdaten erfolgreich erfasst und validiert",
+            "vertragsdaten": "Alle Vertragsdaten erfolgreich erfasst und validiert",
+            "vertragsdatenUndStammdaten": "Alle Vertragsdaten und alle Stammdaten erfolgreich erfasst und validiert"
+          }
+        }
+      },
+      "vertragsdaten": {
+        "arbeitszeitTable": {
+          "header": {
+            "abis": "Bis",
+            "anetto": "Arbeitszeit Netto",
+            "avon": "Von",
+            "kbis": "Kernzeit Bis",
+            "kvon": "Kernzeit Von",
+            "tag": "Tag"
+          },
+          "labels": {
+            "dienstag": "DI",
+            "donnerstag": "DO",
+            "freitag": "FR",
+            "mittwoch": "MI",
+            "montag": "MO",
+            "montagBisFreitag": "MO-FR",
+            "samstag": "SA",
+            "schnellEingabe": "Die Zeile \"MO-FR\" dient als Schnelleingabe für alle Felder in der gleichen Spalte. Die Eingegebenen Werte in der Zeile \"MO-FR\" werden nicht gespeichert.",
+            "sonntag": "SO"
+          },
+          "placeholder": {
+            "amontagVon": "Montag von",
+            "amontagBis": "Montag bis",
+            "amontagNetto": "Montag Nettoarbeitszeit",
+            "adienstagVon": "Dienstag von",
+            "adienstagBis": "Dienstag bis",
+            "amittwochVon": "Mittwoch von",
+            "amittwochBis": "Mittwoch bis",
+            "amittwochNetto": "Mittwoch Nettoarbeitszeit",
+            "adienstagNetto": "Dienstag Nettoarbeitszeit",
+            "adonnerstagVon": "Donnerstag von",
+            "adonnerstagBis": "Donnerstag bis",
+            "adonnerstagNetto": "Donnerstag Nettoarbeitszeit",
+            "afreitagVon": "Freitag von",
+            "afreitagBis": "Freitag bis",
+            "afreitagNetto": "Freitag Nettoarbeitszeit",
+            "asamstagBis": "Samstag bis",
+            "asamstagNetto": "Samstag Nettoarbeitszeit",
+            "asamstagVon": "Samstag von",
+            "asonntagVon": "Sonntag von",
+            "asonntagBis": "Sonntag bis",
+            "asonntagNetto": "Sonntag Nettoarbeitszeit",
+            "montagBisFreitagNetto": "Nettoarbeitszeit Mo-Fr",
+            "montagBisFreitagVon": "Uhrzeit von Mo-Fr",
+            "montagBisFreitagBis": "Uhrzeit bis Mo-Fr",
+            "montagBisFreitagKernzeitVon": "Kernzeit von Mo-Fr",
+            "montagBisFreitagKernzeitBis": "Kernzeit bis Mo-Fr",
+            "kmontagBis": "Montag Kernzeit bis",
+            "kmontagVon": "Montag Kernzeit von",
+            "kdienstagVon": "Dienstag Kernzeit von",
+            "kdienstagBis": "Dienstag Kernzeit bis",
+            "kmittwochVon": "Mittwoch Kernzeit von",
+            "kmittwochBis": "Mittwoch Kernzeit bis",
+            "kdonnerstagVon": "Donnerstag Kernzeit von",
+            "kdonnerstagBis": "Donnerstag Kernzeit bis",
+            "kfreitagVon": "Freitag Kernzeit von",
+            "kfreitagBis": "Freitag Kernzeit bis",
+            "ksamstagVon": "Samstag Kernzeit von",
+            "ksamstagBis": "Samstag Kernzeit bis",
+            "ksonntagVon": "Sonntag Kernzeit von",
+            "ksonntagBis": "Sonntag Kernzeit bis"
+          }
+        },
+        "button": {
+          "anlegen": "Mitarbeitende anlegen",
+          "generieren": "Generieren",
+          "speichern": "Speichern"
+        },
+        "checkbox": {
+          "prefix": "Nein",
+          "suffix": "Ja"
+        },
+        "confirmModal": {
+          "ja": "Ja",
+          "nein": "Nein",
+          "text": "Sind Sie sicher, dass Sie diesen Eintrag löschen möchten?",
+          "title": "Bestätigen"
+        },
+        "description": {
+          "isBefristet": ""
+        },
+        "keineDaten": "Keine Daten vorhanden",
+        "keinNachweis": "kein Nachweis",
+        "label": {
+          "abrechnungsgruppe": "Abrechnungsgruppe",
+          "angerechneteFacheinschlaegigeTaetigkeitenMonate": "Angerechnete facheinschlägige Tätigkeits-Monate",
+          "angerechneteIbisMonate": "Angerechnete ibis-Monate",
+          "anrechenbar": "Anrechenbar",
+          "arbeitszeiten": "Arbeitszeiten",
+          "arbeitszeitmodell": "Arbeitszeitmodell",
+          "arbeitszeitmodellBis": "Arbeitszeitmodell bis",
+          "arbeitszeitmodellVon": "Arbeitszeitmodell von",
+          "artDerZulage": "Art der Zulage",
+          "auswahlBegruendungFuerDurchrechner": "Begründung für Durchrechner",
+          "befristungBis": "Befristung bis",
+          "beschaeftigungsausmass": "Beschäftigungsausmaß",
+          "beschaeftigungsstatus": "Beschäftigungsstatus",
+          "deckungspruefung": "Deckungsprüfung",
+          "dienstnehmergruppe": "Dienstnehmendengruppe",
+          "dienstort": "Dienstort",
+          "eintritt": "Eintritt am",
+          "facheinschlaegigeTaetigkeitenGeprueft": "facheinschlägige Tätigkeiten geprüft",
+          "firma": "Firma",
+          "fixZulage": "Fixzulage",
+          "fuehrungskraft": "Führungskraft",
+          "funktionsZulage": "Funktionszulage",
+          "gehaltVereinbart": "Gehalt vereinbart",
+          "gesamtBrutto": "Gesamt Brutto",
+          "isBefristet": "Befristung",
+          "jobBezeichnung": "Job Bezeichnung",
+          "jobticket": "Jobticket",
+          "jobticketTitle": "Jobticket Auswahl",
+          "kategorie": "Kategorie",
+          "kernzeit": "Kernzeit",
+          "klasse": "Klasse",
+          "kollektivvertrag": "Kollektivvertrag",
+          "kostenstelle": "Kostenstelle",
+          "kvGehaltBerechnet": "KV Gehalt berechnet",
+          "land": "Land",
+          "lehrjahr": "Lehrjahr",
+          "leitungsZulage": "Leitungszulage",
+          "mobileWorking": "Mobile Working",
+          "nachweis": "Nachweis",
+          "naechsteVorrueckung": "Nächste Vorrückung",
+          "notizAllgemein": "Notiz",
+          "notizArbeitszeit": "Notiz",
+          "notizGehalt": "Notiz",
+          "notizZusatzvereinbarung": "Notiz",
+          "ort": "Ort",
+          "plz": "PLZ",
+          "spezielleMittagspausenregelung": "Spezielle Mittagspausenregelung",
+          "startcoach": "Startcoach",
+          "strasse": "Straße",
+          "stufe": "Stufe",
+          "taetigkeit": "Tätigkeit",
+          "ueberzahlung": "Überzahlung",
+          "uestPauschale": "Üst Pauschale",
+          "ugeburtsdatum": "Geburtsdatum",
+          "unachname": "Nachname",
+          "urlaubVorabVereinbart": "Urlaub vorab vereinbart",
+          "usvnr": "SVNR",
+          "uverwandtschaft": "Verwandtschaft",
+          "uvorname": "Vorname",
+          "vereinbarungUEberstunden": "Vereinbarung Überstunden",
+          "vertragsart": "Vertragsart",
+          "verwendungsgruppe": "Verwendungsbereich laut KV",
+          "vordienstzeitenBis": "Bis",
+          "vordienstzeitenVon": "Von",
+          "vwochenstunden": "Wochenstunden",
+          "weitereAdressezuHauptwohnsitz": "weitere Adresse zu Hauptwohnsitz",
+          "wochenstunden": "Wochenstunden",
+          "zulageInEuroFix": "Zulage in Euro",
+          "zulageInEuroFunktion": "Zulage in Euro",
+          "zulageInEuroLeitung": "Zulage in Euro"
+        },
+        "message": {
+          "error": {
+            "unbekannterEintragstyp": "Unbekannter Eintragstyp"
+          },
+          "success": {
+            "save": "Vertragsdaten gespeichert"
+          }
+        },
+        "placeholder": {
+          "abrechnungsgruppe": "Abrechnungsgruppe wählen",
+          "angerechneteFacheinschlaegigeTaetigkeitenMonate": "Angerechnete Monate",
+          "angerechneteIbisMonate": "Angerechnete Monate eingeben",
+          "arbeitszeitmodell": "Arbeitszeitmodell wählen",
+          "arbeitszeitmodellBis": "Datum wählen",
+          "arbeitszeitmodellVon": "Datum wählen",
+          "auswahlBegruendungFuerDurchrechner": "Begründung auswählen",
+          "befristungBis": "Datum auswählen",
+          "beschaeftigungsausmass": "Beschäftigungsausmaß wählen",
+          "beschaeftigungsstatus": "Beschäftigungsstatus wählen",
+          "deckungspruefung": "Deckungsprüfung",
+          "dienstnehmergruppe": "Dienstnehmendengruppe wählen",
+          "dienstort": "Dienstort wählen",
+          "eintritt": "Datum auswählen",
+          "fuehrungskraft": "Führungskraft wählen",
+          "gehaltVereinbart": "Gehalt eingeben",
+          "gesamtBrutto": "Gesamt Brutto",
+          "jobBezeichnung": "Job Bezeichnung wählen",
+          "jobticketTitle": "Job Ticket auswählen",
+          "kategorie": "Kategorie wählen",
+          "klasse": "Klasse eingeben",
+          "kollektivvertrag": "Kollektivvertrag wählen",
+          "kostenstelle": "Kostenstelle auswählen",
+          "kvGehaltBerechnet": "KV Gehalt",
+          "land": "Land auswählen",
+          "lehrjahr": "Lehrjahr eingeben",
+          "naechsteVorrueckung": "Datum wählen",
+          "notizAllgemein": "Notiz eingeben",
+          "notizArbeitszeit": "Notiz eingeben",
+          "notizGehalt": "Notiz eingeben",
+          "notizZusatzvereinbarung": "Notiz eingeben",
+          "ort": "Wohnort eingeben",
+          "plz": "Postleitzahl eingeben",
+          "spezielleMittagspausenregelung": "Regelung eingeben",
+          "startcoach": "Startcoach wählen",
+          "strasse": "Straße eingeben",
+          "stufe": "Gehaltsstufe",
+          "taetigkeit": "Tätigkeit wählen",
+          "ueberzahlung": "Überzahlung eingeben",
+          "urlaubVorabVereinbart": "Vereinbarung eingeben",
+          "vereinbarungUEberstunden": "Vereinbarung auswählen",
+          "verwendungsgruppe": "Verwendungsgruppe wählen",
+          "wochenstunden": "Wochenstunden wählen",
+          "zulageInEuroFix": "Betrag eingeben",
+          "zulageInEuroFunktion": "Betrag eingeben",
+          "zulageInEuroLeitung": "Betrag eingeben"
+        },
+        "section": {
+          "allgemein": "Allgemein",
+          "arbeitszeit": "Arbeitszeit",
+          "arbeitszeiten": "Arbeitszeiten",
+          "artDerZulage": "Art der Zulage",
+          "gehalt": "Gehalt",
+          "unterhaltsberechtigte": "Unterhaltsberechtigte",
+          "vordienstzeiten": "Vordienstzeiten",
+          "zusatzvereinbarung": "Zusatzvereinbarung"
+        },
+        "spalte": {
+          "alter": "Alter",
+          "facheinschlaegig": "Facheinschlägig"
+        },
+        "title": "Vertragsdaten erfassen",
+        "unterhaltsberechtigte": {
+          "checkbox": {
+            "prefix": "Nein",
+            "suffix": "Ja"
+          },
+          "create": "Unterhaltsberechtigte hinzufügen",
+          "label": {
+            "abort": "Abbrechen",
+            "delete": "Löschen",
+            "deleteDescription": "Sind Sie sicher dass sie diesen Eintrag unwiderruflich löschen möchten?",
+            "deleteTitle": "Unterhaltsberechtigte löschen",
+            "submit": "Speichern",
+            "ugeburtsdatum": "Geburtsdatum",
+            "unachname": "Nachname",
+            "unterhaltsberechtigteHinzufuegen": "Unterhaltsberechtigte hinzufügen",
+            "usvnr": "SVNR",
+            "uverwandtschaft": "Verwandtschaft",
+            "uvorname": "Vorname"
+          },
+          "message": {
+            "delete": {
+              "success": "Unterhaltsberechtigte Person erfolgreich gelöscht"
+            },
+            "save": {
+              "success": "Unterhaltsberechtigte Person gespeichert"
+            }
+          },
+          "placeholder": {
+            "submit": "Speichern",
+            "ugeburtsdatum": "Datum wählen",
+            "unachname": "Nachname eingeben",
+            "usvnr": "SVNR eingeben",
+            "uverwandtschaft": "Verwandtschaft auswählen",
+            "uvorname": "Vorname eingeben"
+          },
+          "table": {
+            "alter": "Alter",
+            "bearbeitenLoeschen": "Bearbeiten / Löschen",
+            "noResults": "Keine Unterhaltsberechtigte vorhanden",
+            "ugeburtsdatum": "Geburtsdatum",
+            "unachname": "Nachname",
+            "usvnr": "SVNR",
+            "uverwandtschaft": "Verwandtschaft",
+            "uvorname": "Vorname"
+          },
+          "title": "Unterhaltsberechtigte"
+        },
+        "vordienstzeiten": {
+          "checkbox": {
+            "prefix": "Nein",
+            "suffix": "Ja"
+          },
+          "create": "Vordienstzeit hinzufügen",
+          "label": {
+            "abort": "Abbrechen",
+            "anrechenbar": "Anrechenbar",
+            "delete": "Löschen",
+            "deleteDescription": "Sind Sie sicher dass sie diesen Eintrag unwiderruflich löschen möchten?",
+            "deleteTitle": "Vordienstzeit löschen",
+            "firma": "Firma",
+            "nachweis": "Nachweis",
+            "submit": "Speichern",
+            "vertragsart": "Vertragsart",
+            "vordienstzeitenBis": "Bis",
+            "vordienstzeitenVon": "Von",
+            "vordienstzeitHinzufuegen": "Vordienstzeit hinzufügen",
+            "vwochenstunden": "Wochenstunden"
+          },
+          "message": {
+            "delete": {
+              "success": "Vordienstzeit erfolgreich gelöscht."
+            },
+            "save": {
+              "error": "Es gab einen Fehler beim speichern.",
+              "success": "Vordienstzeit erfolgreich gespeichert."
+            }
+          },
+          "placeholder": {
+            "firma": "Firma",
+            "submit": "Speichern",
+            "vertragsart": "Vertragsart",
+            "vordienstzeitenBis": "Datum eingeben",
+            "vordienstzeitenVon": "Datum eingeben",
+            "vwochenstunden": "Wochenstunden eingeben"
+          },
+          "table": {
+            "anrechenbar": "Anrechenbar",
+            "anrechenbarJa": "Ja",
+            "anrechenbarNein": "Nein",
+            "bearbeitenLoeschen": "Bearbeiten / Löschen",
+            "bis": "Bis",
+            "facheinschlägig": "Facheinschlägig",
+            "firma": "Firma",
+            "herunterladen": "Nachweis herunterladen",
+            "keinNachweis": "Kein Nachweis",
+            "nachweis": "Nachweis",
+            "nachweisVorhanden": "Nachweis vorhanden",
+            "noResults": "Keine Vordienstzeiten vorhanden",
+            "vertragsart": "Vertragsart",
+            "von": "Von",
+            "wochenstunden": "Wochenstunden",
+            "zeitraum": "Zeitraum"
+          },
+          "title": "Vordienstzeiten"
+        }
+      }
+    },
+    "onboarding": {
+      "eintrittsdatum": "Eintrittsdatum",
+      "kostenstelle": "Kostenstelle",
+      "nachname": "Nachname",
+      "status": "Status",
+      "svnr": "SVNR",
+      "title": "Mitarbeitenden Onboarding",
+      "ueberpruefen": "Überprüfen",
+      "vorname": "Vorname"
+    },
+    "verwalten": {
+      "button": {
+        "filter": "Filter",
+        "reset": "Zurücksetzen",
+        "suchen": "Suchen"
+      },
+      "error": {
+        "laden": "Fehler beim Laden der Mitarbeitenden"
+      },
+      "filter": {
+        "beschaeftigungsstatus": "Beschaeftigungsstatus auswählen",
+        "firma": "Firma auswählen",
+        "jobbezeichnung": "Jobbezeichnung auswählen",
+        "kategorie": "Kategorie auswählen",
+        "kostenstelle": "Kostenstelle auswählen",
+        "vertragsart": "Vertragsart auswählen",
+        "wohnort": "Wohnort auswählen"
+      },
+      "suche": {
+        "platzhalter": "Name, Personalnummer oder SVNR eingeben"
+      },
+      "table": {
+        "bearbeiten": "Bearbeiten",
+        "fuehrungskraft": "Führungskraft",
+        "kostenstelle": "Kostenstelle",
+        "name": "Name",
+        "noData": "Keine Mitarbeitenden gefunden.",
+        "noRole": "Berechtigung fehlt",
+        "svnr": "SVNR"
+      },
+      "title": "Mitarbeitende verwalten"
+    }
+  },
+  "mitarbeiterVereinbarungen": {
+    "detail": {
+      "error": {
+        "laden": "Fehler beim Laden der Vereinbarung"
+      },
+      "label": {
+        "abbrechen": "Abbrechen",
+        "ansicht": "Finales Dokument",
+        "create": "Vereinbarung erstellen",
+        "createVereinbarung": "Vereinbarung anlegen",
+        "dokumentZurUnterschrift": "Dokument zur Unterschrift",
+        "edit": "Vereinbarung bearbeiten",
+        "gueltigAb": "Gültig ab",
+        "gueltigBis": "Gültig bis",
+        "headline": "Vereinbarung zwischen MA und FK",
+        "herunterladen": "Herunterladen",
+        "mitarbeiter": "Mitarbeitende",
+        "overrideModalDescription": "Beim erneuten Signieren wird die aktuelle Vereinbarung überschrieben. Die alten Werte gehen verloren. Sind sie sicher?",
+        "overrideModalTitle": "Bestehende Vereinbarung überschreiben?",
+        "reportErzeugen": "Erzeugen",
+        "reports": "Basis Reports",
+        "reportSettings": "Einstellungen",
+        "selectedVereinbarung": "Vereinbarung auswählen",
+        "speichern": "Speichern",
+        "unterschriftenlaufAbbrechen": "Unterschriftenlauf abbrechen",
+        "unterschriftenlaufGestartet": "Unterschriftenlauf wurde gestartet",
+        "vorschau": "Vorschau",
+        "weiter": "Weiter"
+      },
+      "placeholder": {
+        "gueltigAb": "Datum wählen",
+        "gueltigBis": "Datum wählen",
+        "mitarbeiter": "Mitarbeitende auswählen",
+        "selectedVereinbarung": "Vereinbarung auswählen"
+      },
+      "title": {
+        "create": "Vereinbarung erstellen",
+        "edit": "Vereinbarung bearbeiten"
+      }
+    },
+    "overview": {
+      "label": {
+        "reset": "Zurücksetzen",
+        "suchen": "Suchen",
+        "vereinbarungen": "Vereinbarungen",
+        "vereinbarungErstellen": "Vereinbarung erstellen"
+      },
+      "placeholder": {
+        "firma": "Firma auswählen",
+        "searchTerm": "Mitarbeitendename, PNr oder SVNr eingeben",
+        "status": "Alle status"
+      },
+      "table": {
+        "bearbeiten": "Bearbeiten",
+        "gueltigAb": "Gültig ab",
+        "name": "Name",
+        "noData": "Keine Vereinbarungen gefunden.",
+        "status": "Vereinbarungs-Status",
+        "step": "Aktueller Schritt",
+        "title": "Titel der Vereinbarung"
+      },
+      "vereinbarungsStatus": {
+        "abgelehnt": "Abgelehnt",
+        "completed": "Vollständig",
+        "error": "Fehlerhaft",
+        "genehmigt": "Genehmigt",
+        "new": "Neu",
+        "noStatus": "Kein Status"
+      },
+      "vereinbarungsWorkflowStatus": {
+        "dokument_erstellt": "Dokument erstellt",
+        "noStatus": "Kein Status",
+        "unterschriebenes_dokument_gescheitert": "Unterschriebenes Dokument gescheitert",
+        "unterschriebenes_dokument_gespeichert": "Unterschriebenes Dokument gespeichert",
+        "unterschriebenes_dokument_gueltig": "Unterschriebenes Dokument gültig",
+        "unterschriftenlauf_durchgefuehrt": "Unterschriftenlauf durchgefuehrt",
+        "unterschriftenlauf_gescheitert": "Unterschriftenlauf gescheitert",
+        "unterschriftenlauf_gestartet": "Unterschriftenlauf gestartet",
+        "vereinbarung_erstellt": "Vereinbarung erstellt",
+        "vereinbarung_vervollstaendigt": "Vereinbarung vervollständigt"
+      }
+    }
+  },
+  "mitarbeiterVertragsaenderungen": {
+    "detail": {
+      "datenVervollstaendigen": {
+        "labels": {
+          "abbrechen": "Abbrechen",
+          "basisAngaben": "Basis Angaben",
+          "dokumentErstellen": "Dokument erstellen",
+          "gueltigAb": "Gültig ab",
+          "interneAnmerkung": "Interne Anmerkung",
+          "offizielleBemerkung": "Offizielle Bemerkung",
+          "speichern": "Speichern"
+        },
+        "placeholder": {
+          "gueltigAb": "Datum eingeben",
+          "interneAnmerkung": "Bitte die Arbeitszeiten genau prüfen.",
+          "offizielleBemerkung": "Die Wochenstunden sollen nach mündlicher Vereinbarung erhöht werden."
+        }
+      },
+      "labels": {
+        "abbrechen": "Abbrechen",
+        "ablehnen": "Ablehnen",
+        "acceptSuccess": "Der Schritt wurde erfolgreich genehmigt",
+        "aenderungsauszug": "Änderungsauszug",
+        "basisAngaben": "Basis Angaben",
+        "basisDaten": "Basisdaten",
+        "datenVervollstaendigen": "Daten vervollständigen",
+        "declineSuccess": "Der Schritt wurde erfolgreich abgelehnt",
+        "dokumentErstellen": "Dokument erstellen",
+        "empfaengerkreis": "Empfängerkreis",
+        "genehmigen": "Genehmigen",
+        "genehmigerPrueft": "Genehmiger prüft",
+        "gueltigAb": "Gültig ab",
+        "interneAnmerkung": "Interne Anmerkung",
+        "lohnverrechnungPrueft": "Lohnverrechnung prüft",
+        "neuerZusatz": "Neuer Zusatz",
+        "offizielleBemerkung": "Offizielle Bemerkung",
+        "peoplePrueft": "People prüft",
+        "saveSuccess": "Das Formular wurde erfolgreich gespeichert",
+        "speichern": "Speichern",
+        "vorschau": "Vorschau",
+        "zum": "zum",
+        "zurPruefungVorlegen": "Zur Prüfung Vorlegen",
+        "zusatz": "Zusatz",
+        "zusatzFuer": "Zusatz für"
+      },
+      "placeholder": {
+        "empfaengerkreis": "Sie können hier durch Komma getrennte E-Mail Adressen hinterlegen (meine@email.com, test@ibisacam.at, ...)",
+        "gueltigAb": "Datum eingeben",
+        "interneAnmerkung": "Bitte die Arbeitszeiten genau prüfen.",
+        "offizielleBemerkung": "Die Wochenstunden sollen nach mündlicher Vereinbarung erhöht werden."
+      },
+      "title": "Vertragsänderung",
+      "unterschriftenlaufStarten": {
+        "label": {
+          "infoDescripton": "Nach starten werden alle relevanten Daten und Dokumente zur Unterschrift weitergeleitet.",
+          "keineDaten": "Die Anfrage hat keine Daten zurückgeliefert",
+          "success": "Unterschriftenlauf wurde erfolgreich gestartet",
+          "unterschriftenlaufStarten": "Unterschriftenlauf starten"
+        }
+      },
+      "zurPruefungVorlegen": {
+        "labels": {
+          "ablehnen": "Ablehnen",
+          "aenderungsauszug": "Änderungsauszug",
+          "basisDaten": "Basisdaten",
+          "genehmigen": "Genehmigen",
+          "gueltigAb": "Gültig ab",
+          "interneAnmerkung": "Interne Anmerkung",
+          "offizielleBemerkung": "Offizielle Bemerkung",
+          "speichern": "Speichern",
+          "vorschau": "Vorschau",
+          "zurPruefungVorlegen": "Zur Prüfung Vorlegen"
+        },
+        "placeholder": {
+          "austrittsDatum": "Datum eingeben",
+          "interneAnmerkung": "Bitte die Arbeitszeiten genau prüfen.",
+          "offizielleBemerkung": "Die Wochenstunden sollen nach mündlicher Vereinbarung erhöht werden."
+        }
+      }
+    },
+    "overview": {
+      "button": {
+        "create": "Vertragsänderung erstellen"
+      },
+      "error": {
+        "laden": "Fehler beim Laden der Vertragsänderungen"
+      },
+      "filter": {
+        "status": "Status auswählen",
+        "suche": "Name oder SVNR eingeben"
+      },
+      "table": {
+        "bearbeiten": "Bearbeiten",
+        "gueltigAb": "Gültig ab",
+        "interneAnmerkung": "Kommentar",
+        "kostenstelle": "Kostenstelle",
+        "nachname": "Nachname",
+        "noData": "Keine Vereinbarungen gefunden.",
+        "status": "Workflow Status",
+        "svnr": "SVNR",
+        "vorname": "Vorname"
+      },
+      "title": "Vertragsänderungen",
+      "vertragsaenderungsstatus": {
+        "all": "Alle",
+        "canceled": "Abgebrochen",
+        "closed": "Abgeschlossen",
+        "error": "Fehlgeschlagen",
+        "in_progress": "In Arbeit",
+        "new": "Neu",
+        "noStatus": "Kein Status",
+        "open": "Offen"
+      }
+    }
+  },
+  "reports": {
+    "error": {
+      "laden": "Fehler beim Laden der Reports.",
+      "noResults": "Keine Formulardaten gefunden."
+    },
+    "infoText": {
+      "selectedReport": "Für jeden ausgewählten Report müssen sie das entsprechende Formular ausfüllen um den Report zu erzeugen."
+    },
+    "labels": {
+      "createReport": "Report erstellen",
+      "reportErzeugen": "Report Erzeugen",
+      "reportHerunterladen": "Herunterladen",
+      "reports": "Basis Reports",
+      "reportSettings": "Einstellungen",
+      "selectedFormat": "Dateiformat auswählen",
+      "selectedReport": "Report auswählen",
+      "vorschau": "Vorschau"
+    },
+    "placeholder": {
+      "selectedFormat": "Dateiformat auswählen",
+      "selectedReport": "Report auswählen"
+    }
+  },
+  "vertretungsplanung": {
+    "form": {
+      "label": {
+        "abwesendBis": "Abwesend bis",
+        "abwesendVon": "Abwesend von",
+        "grund": "Grund",
+        "sucheStarten": "Suche starten",
+        "trainer": "Trainer"
+      },
+      "placeholder": {
+        "abwesendBis": "Datum wählen",
+        "abwesendVon": "Datum wählen",
+        "grund": "Grund wählen",
+        "trainer": "Trainer auswählen"
+      }
+    },
+    "labels": {
+      "arbeitstage": "Arbeitstage",
+      "bis": "bis",
+      "dauer": "Dauer",
+      "grund": "Grund",
+      "krankheit": "Krankheit",
+      "neueVertretung": "Neue Vertretung planen",
+      "pflegeurlaub": "Pflegeurlaub",
+      "urlaub": "Urlaub",
+      "vertretungAbbrechen": "Vertretung abbrechen",
+      "vertretungBestaetigen": "Vertretung bestätigen",
+      "vertretungFür": "Vertretung für",
+      "vertretungsplanung": "Vertretungsplanung",
+      "vertretungsplanungErgebnis": "Vertretungsplanung - Ergebnis",
+      "vertretungsplanungUebersicht": "Vertretungsplanung - Übersicht",
+      "vom": "vom"
+    },
+    "table": {
+      "datum": "Datum",
+      "email": "Email",
+      "seminar": "Seminar",
+      "tel": "Tel.",
+      "uhrzeit": "Uhrzeit",
+      "vertretung": "Vertretung"
+    }
+  },
+  "errorPage": {
+    "backToDashboard": "Zurück zum Dashboard",
+    "pageNotFound": "Seite nicht gefunden",
+    "somthingWentWrong": "Etwas ist schiefgegangen."
+  }
+}

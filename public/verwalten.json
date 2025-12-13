@@ -1,0 +1,234 @@
+[
+  {
+    "Nachname": "Müller",
+    "Vorname": "Anna",
+    "SVNr": 201302345,
+    "Land": "Österreich",
+    "PLZ": 1010,
+    "Ort": "Wien"
+  },
+  {
+    "Nachname": "Schmidt",
+    "Vorname": "Max",
+    "SVNr": 301405678,
+    "Land": "Österreich",
+    "PLZ": 5020,
+    "Ort": "Salzburg"
+  },
+  {
+    "Nachname": "Huber",
+    "Vorname": "Sophie",
+    "SVNr": 401308910,
+    "Land": "Österreich",
+    "PLZ": 8010,
+    "Ort": "Graz"
+  },
+  {
+    "Nachname": "Bauer",
+    "Vorname": "Lukas",
+    "SVNr": 501401213,
+    "Land": "Österreich",
+    "PLZ": 6020,
+    "Ort": "Innsbruck"
+  },
+  {
+    "Nachname": "Wagner",
+    "Vorname": "Mia",
+    "SVNr": 601302546,
+    "Land": "Österreich",
+    "PLZ": 4020,
+    "Ort": "Linz"
+  },
+  {
+    "Nachname": "Mayer",
+    "Vorname": "Leon",
+    "SVNr": 701405879,
+    "Land": "Österreich",
+    "PLZ": 9020,
+    "Ort": "Klagenfurt"
+  },
+  {
+    "Nachname": "Hofer",
+    "Vorname": "Lena",
+    "SVNr": 801308912,
+    "Land": "Österreich",
+    "PLZ": 7000,
+    "Ort": "Eisenstadt"
+  },
+  {
+    "Nachname": "Leitner",
+    "Vorname": "Julian",
+    "SVNr": 901401234,
+    "Land": "Österreich",
+    "PLZ": 3100,
+    "Ort": "St. Pölten"
+  },
+  {
+    "Nachname": "Gruber",
+    "Vorname": "Emma",
+    "SVNr": 100302567,
+    "Land": "Österreich",
+    "PLZ": 9500,
+    "Ort": "Villach"
+  },
+  {
+    "Nachname": "Eder",
+    "Vorname": "Paul",
+    "SVNr": 110405891,
+    "Land": "Österreich",
+    "PLZ": 6800,
+    "Ort": "Feldkirch"
+  },
+  {
+    "Nachname": "Fischer",
+    "Vorname": "Marie",
+    "SVNr": 120308913,
+    "Land": "Österreich",
+    "PLZ": 3500,
+    "Ort": "Krems"
+  },
+  {
+    "Nachname": "Pichler",
+    "Vorname": "David",
+    "SVNr": 130401236,
+    "Land": "Österreich",
+    "PLZ": 8600,
+    "Ort": "Bruck an der Mur"
+  },
+  {
+    "Nachname": "Schneider",
+    "Vorname": "Johanna",
+    "SVNr": 140302569,
+    "Land": "Österreich",
+    "PLZ": 2700,
+    "Ort": "Wr. Neustadt"
+  },
+  {
+    "Nachname": "Weber",
+    "Vorname": "Felix",
+    "SVNr": 150405893,
+    "Land": "Österreich",
+    "PLZ": 4600,
+    "Ort": "Wels"
+  },
+  {
+    "Nachname": "Steiner",
+    "Vorname": "Hannah",
+    "SVNr": 160308914,
+    "Land": "Österreich",
+    "PLZ": 6850,
+    "Ort": "Dornbirn"
+  },
+  {
+    "Nachname": "Wolf",
+    "Vorname": "Florian",
+    "SVNr": 170401238,
+    "Land": "Österreich",
+    "PLZ": 1230,
+    "Ort": "Wien"
+  },
+  {
+    "Nachname": "Ebner",
+    "Vorname": "Lara",
+    "SVNr": 180302571,
+    "Land": "Österreich",
+    "PLZ": 9020,
+    "Ort": "Klagenfurt"
+  },
+  {
+    "Nachname": "Schwarz",
+    "Vorname": "Simon",
+    "SVNr": 190405895,
+    "Land": "Österreich",
+    "PLZ": 4400,
+    "Ort": "Steyr"
+  },
+  {
+    "Nachname": "Reiter",
+    "Vorname": "Marlene",
+    "SVNr": 200308915,
+    "Land": "Österreich",
+    "PLZ": 2340,
+    "Ort": "Mödling"
+  },
+  {
+    "Nachname": "Maier",
+    "Vorname": "Niklas",
+    "SVNr": 210401240,
+    "Land": "Österreich",
+    "PLZ": 2700,
+    "Ort": "Wr. Neustadt"
+  },
+  {
+    "Nachname": "Lechner",
+    "Vorname": "Clara",
+    "SVNr": 220302573,
+    "Land": "Österreich",
+    "PLZ": 3130,
+    "Ort": "Herzogenburg"
+  },
+  {
+    "Nachname": "Böhm",
+    "Vorname": "Fabian",
+    "SVNr": 230405897,
+    "Land": "Österreich",
+    "PLZ": 3300,
+    "Ort": "Amstetten"
+  },
+  {
+    "Nachname": "Koch",
+    "Vorname": "Isabella",
+    "SVNr": 240308916,
+    "Land": "Österreich",
+    "PLZ": 6850,
+    "Ort": "Dornbirn"
+  },
+  {
+    "Nachname": "Lang",
+    "Vorname": "Matthias",
+    "SVNr": 250401242,
+    "Land": "Österreich",
+    "PLZ": 4060,
+    "Ort": "Leonding"
+  },
+  {
+    "Nachname": "Fuchs",
+    "Vorname": "Sara",
+    "SVNr": 260302575,
+    "Land": "Österreich",
+    "PLZ": 3300,
+    "Ort": "Amstetten"
+  },
+  {
+    "Nachname": "Hofer",
+    "Vorname": "Oliver",
+    "SVNr": 270405899,
+    "Land": "Österreich",
+    "PLZ": 7100,
+    "Ort": "Neusiedl am See"
+  },
+  {
+    "Nachname": "Moser",
+    "Vorname": "Nina",
+    "SVNr": 280308917,
+    "Land": "Österreich",
+    "PLZ": 9020,
+    "Ort": "Klagenfurt"
+  },
+  {
+    "Nachname": "Brandl",
+    "Vorname": "Samuel",
+    "SVNr": 290401244,
+    "Land": "Österreich",
+    "PLZ": 9020,
+    "Ort": "Klagenfurt"
+  },
+  {
+    "Nachname": "Ertl",
+    "Vorname": "Magdalena",
+    "SVNr": 300302577,
+    "Land": "Österreich",
+    "PLZ": 5020,
+    "Ort": "Salzburg"
+  }
+]
