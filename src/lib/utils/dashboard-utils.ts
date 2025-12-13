@@ -63,7 +63,14 @@ export async function setFavouriteDashboard(id: number) {
     )
   }
 
-  return res.json()
+  // Check if response has content before parsing JSON
+  const contentType = res.headers.get('content-type')
+  if (contentType && contentType.includes('application/json')) {
+    return res.json()
+  }
+
+  // If no JSON content, just return success
+  return { success: true }
 }
 
 export async function deleteDashboardData(id: number) {
