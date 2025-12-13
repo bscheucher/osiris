@@ -183,10 +183,15 @@ export default function Page() {
       const response = await getAllDashboards()
       setDashboardsData(response)
 
+      console.log('Save: Looking for dashboard with name:', dashboardName)
+      console.log('Save: Available dashboards:', response.dashboards)
+
       // Find the saved dashboard by name
       const savedDashboard = response.dashboards.find(
         (d: DashboardData) => d.dashboardName === dashboardName
       )
+
+      console.log('Save: Found saved dashboard:', savedDashboard)
 
       // Update dashboard names list
       const names = response.dashboards.map((d: DashboardData) => d.dashboardName)
@@ -198,7 +203,9 @@ export default function Page() {
         setLayout(newLayout)
         setSelectedDashboardName(savedDashboard.dashboardName)
         setSelectedDashboardId(savedDashboard.dashboardId as number)
+        console.log('Save: Selected dashboard - Name:', savedDashboard.dashboardName, 'ID:', savedDashboard.dashboardId)
       } else {
+        console.warn('Save: Saved dashboard not found by name, using fallback')
         // Fallback: select first dashboard if saved one not found
         if (response.dashboards.length > 0) {
           const firstDashboard = response.dashboards[0]
@@ -206,6 +213,7 @@ export default function Page() {
           setLayout(newLayout)
           setSelectedDashboardName(firstDashboard.dashboardName)
           setSelectedDashboardId(firstDashboard.dashboardId as number)
+          console.log('Save: Selected first dashboard - Name:', firstDashboard.dashboardName, 'ID:', firstDashboard.dashboardId)
         }
       }
 
