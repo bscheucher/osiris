@@ -29,7 +29,12 @@ export async function getAllDashboards() {
     )
   }
 
-  return res.json()
+  try {
+    return await res.json()
+  } catch (e) {
+    console.error('Failed to parse getAllDashboards response as JSON:', e)
+    throw new Error('Invalid JSON response from server')
+  }
 }
 
 export async function saveDashboardData(data: DashboardData) {
@@ -63,13 +68,17 @@ export async function setFavouriteDashboard(id: number) {
     )
   }
 
-  // Check if response has content before parsing JSON
+  // Try to parse JSON, but don't fail if it's not JSON
   const contentType = res.headers.get('content-type')
   if (contentType && contentType.includes('application/json')) {
-    return res.json()
+    try {
+      return await res.json()
+    } catch (e) {
+      console.warn('Failed to parse JSON response, but request was successful')
+    }
   }
 
-  // If no JSON content, just return success
+  // If no JSON content or parsing failed, just return success
   return { success: true }
 }
 
