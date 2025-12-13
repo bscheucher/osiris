@@ -188,12 +188,25 @@ export default function Page() {
         (d: DashboardData) => d.dashboardName === dashboardName
       )
 
+      // Update dashboard names list
+      const names = response.dashboards.map((d: DashboardData) => d.dashboardName)
+      setDashboardNames(names)
+
       // Select the saved dashboard
       if (savedDashboard) {
-        await fetchDashboards(savedDashboard.dashboardId as number)
+        const newLayout = createLayoutFromWidgets(savedDashboard.widgets)
+        setLayout(newLayout)
+        setSelectedDashboardName(savedDashboard.dashboardName)
+        setSelectedDashboardId(savedDashboard.dashboardId as number)
       } else {
-        // Fallback to default behavior if dashboard not found
-        await fetchDashboards()
+        // Fallback: select first dashboard if saved one not found
+        if (response.dashboards.length > 0) {
+          const firstDashboard = response.dashboards[0]
+          const newLayout = createLayoutFromWidgets(firstDashboard.widgets)
+          setLayout(newLayout)
+          setSelectedDashboardName(firstDashboard.dashboardName)
+          setSelectedDashboardId(firstDashboard.dashboardId as number)
+        }
       }
 
       setIsEditMode(false)
