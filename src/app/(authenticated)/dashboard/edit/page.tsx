@@ -75,34 +75,53 @@ export default function Page() {
     [widgets.data]
   )
 
-  const fetchDashboards = useCallback(async () => {
-    setIsLoadingDashboard(true)
-    try {
-      const response = await getAllDashboards()
-      setDashboardsData(response)
+  const fetchDashboards = useCallback(
+    async (selectDashboardId?: number | null) => {
+      setIsLoadingDashboard(true)
+      try {
+        const response = await getAllDashboards()
+        setDashboardsData(response)
 
-      const favoriteDashboard = response.dashboards.find(
-        (dashboard: DashboardData) =>
-          dashboard.dashboardId === response.favouriteDashboard
-      )
+        const names = response.dashboards.map((d: any) => d.dashboardName)
+        setDashboardNames(names)
 
-      if (favoriteDashboard) {
-        const favoriteLayout = createLayoutFromWidgets(
-          favoriteDashboard.widgets
-        )
-        setLayout(favoriteLayout)
-        setSelectedDashboardName(favoriteDashboard.dashboardName)
-        setSelectedDashboardId(favoriteDashboard.dashboardId as number)
+        // Determine which dashboard to select
+        let dashboardToSelect: DashboardData | undefined
+
+        if (selectDashboardId === null) {
+          // Explicitly don't select any dashboard (e.g., after deleting last dashboard)
+          setSelectedDashboardId(null)
+          setSelectedDashboardName('')
+          setLayout([])
+          return
+        } else if (selectDashboardId !== undefined) {
+          // Select the specified dashboard if it exists
+          dashboardToSelect = response.dashboards.find(
+            (dashboard: DashboardData) =>
+              dashboard.dashboardId === selectDashboardId
+          )
+        } else {
+          // Default behavior: select the favourite dashboard
+          dashboardToSelect = response.dashboards.find(
+            (dashboard: DashboardData) =>
+              dashboard.dashboardId === response.favouriteDashboard
+          )
+        }
+
+        if (dashboardToSelect) {
+          const newLayout = createLayoutFromWidgets(dashboardToSelect.widgets)
+          setLayout(newLayout)
+          setSelectedDashboardName(dashboardToSelect.dashboardName)
+          setSelectedDashboardId(dashboardToSelect.dashboardId as number)
+        }
+      } catch (error) {
+        showErrorMessage(error)
+      } finally {
+        setIsLoadingDashboard(false)
       }
-
-      const names = response.dashboards.map((d: any) => d.dashboardName)
-      setDashboardNames(names)
-    } catch (error) {
-      showErrorMessage(error)
-    } finally {
-      setIsLoadingDashboard(false)
-    }
-  }, [createLayoutFromWidgets])
+    },
+    [createLayoutFromWidgets]
+  )
 
   useEffect(() => {
     fetchDashboards()
@@ -152,12 +171,31 @@ export default function Page() {
         selectedDashboardId ?? undefined
       )
 
+      const isCreatingNew = selectedDashboardId == null
+
       await saveDashboardData(saveDashboardRequest)
       showSuccess(
         (!selectedDashboardId ? t('message.success.savePrefix') + ' ' : '') +
           t('message.success.save')
       )
-      await fetchDashboards()
+
+      // Fetch dashboards to get updated data
+      const response = await getAllDashboards()
+      setDashboardsData(response)
+
+      // Find the saved dashboard by name
+      const savedDashboard = response.dashboards.find(
+        (d: DashboardData) => d.dashboardName === dashboardName
+      )
+
+      // Select the saved dashboard
+      if (savedDashboard) {
+        await fetchDashboards(savedDashboard.dashboardId as number)
+      } else {
+        // Fallback to default behavior if dashboard not found
+        await fetchDashboards()
+      }
+
       setIsEditMode(false)
       setEditableDashboardName('')
     } catch (error) {
@@ -174,7 +212,7 @@ export default function Page() {
     }
 
     const selectedDashboard = dashboardsData.dashboards?.find(
-      (d) => d.dashboardName === selectedName
+      (d: DashboardData) => d.dashboardName === selectedName
     )
 
     if (selectedDashboard) {
@@ -217,17 +255,10 @@ export default function Page() {
       await setFavouriteDashboard(favId as number)
       showSuccess(t('favouriteDashboard.message.success.saved'))
 
-      setDashboardsData((prevData) => {
-        if (!prevData) return prevData
-        return {
-          ...prevData,
-          favouriteDashboard: favId,
-          dashboards: prevData.dashboards || [],
-        }
-      })
+      // Refresh dashboard list while keeping current selection
+      await fetchDashboards(selectedDashboardId)
     } catch (error) {
       console.error('Error setting favorite dashboard:', error)
-    } finally {
       setIsLoadingDashboard(false)
     }
   }
@@ -252,29 +283,19 @@ export default function Page() {
       await deleteDashboardData(selectedDashboardId)
       showSuccess(t('delete.message.success.deleted'))
 
-      if (!dashboardsData) {
-        return
-      }
+      // Fetch updated dashboard list
+      const response = await getAllDashboards()
 
-      const updatedDashboards = dashboardsData.dashboards.filter(
-        (dashboard) => dashboard.dashboardId !== selectedDashboardId
-      )
-
-      if (updatedDashboards.length === 0) {
-        setSelectedDashboardId(null)
-        setSelectedDashboardName('')
-        setLayout([])
+      if (response.dashboards.length === 0) {
+        // No dashboards remaining - clear selection
+        await fetchDashboards(null)
       } else {
-        const firstDashboard = updatedDashboards[0]
-        setSelectedDashboardId(firstDashboard.dashboardId as number)
-        handleDashboardSelect(firstDashboard.dashboardName)
-        await handleFavouriteDashboard(firstDashboard.dashboardId as number)
+        // Select the first remaining dashboard
+        const firstDashboard = response.dashboards[0]
+        await fetchDashboards(firstDashboard.dashboardId as number)
       }
-
-      await fetchDashboards()
     } catch (error) {
       console.error('Error deleting dashboard:', error)
-    } finally {
       setIsLoadingDashboard(false)
     }
   }
