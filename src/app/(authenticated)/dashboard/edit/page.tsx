@@ -171,16 +171,29 @@ export default function Page() {
         dashboardName = selectedDashboardName
       }
 
-      const isFavourite =
-        dashboardsData?.favouriteDashboard === selectedDashboardId
+      const isCreatingNew = selectedDashboardId == null
+
+      // Determine if this should be set as favourite
+      let isFavourite: boolean
+      if (isCreatingNew) {
+        // When creating new dashboard:
+        // - If no dashboards exist yet, make it favourite
+        // - If no favourite is set, make it favourite
+        // - Otherwise, don't make it favourite
+        const hasNoDashboards = !dashboardsData || dashboardsData.dashboards.length === 0
+        const noFavouriteSet = !dashboardsData?.favouriteDashboard
+        isFavourite = hasNoDashboards || noFavouriteSet
+      } else {
+        // When editing existing: keep current favourite status
+        isFavourite = dashboardsData?.favouriteDashboard === selectedDashboardId
+      }
+
       const saveDashboardRequest = createSaveDashboardRequest(
         dashboardName,
         widgetsData,
         isFavourite,
         selectedDashboardId ?? undefined
       )
-
-      const isCreatingNew = selectedDashboardId == null
 
       await saveDashboardData(saveDashboardRequest)
       showSuccess(
