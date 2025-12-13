@@ -202,7 +202,7 @@ export default function Page() {
           },
           response.dashboards[0]
         )
-        console.log('Save: Created new dashboard, selecting highest ID:', dashboardToSelect.dashboardId)
+        console.log('Save: Created new dashboard, selecting highest ID:', dashboardToSelect?.dashboardId)
       } else if (!isCreatingNew) {
         // For existing dashboards, find by ID
         dashboardToSelect = response.dashboards.find(
