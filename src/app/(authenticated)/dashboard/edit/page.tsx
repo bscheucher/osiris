@@ -106,6 +106,12 @@ export default function Page() {
             (dashboard: DashboardData) =>
               dashboard.dashboardId === response.favouriteDashboard
           )
+
+          // If no favourite set, select the first dashboard as fallback
+          if (!dashboardToSelect && response.dashboards.length > 0) {
+            dashboardToSelect = response.dashboards[0]
+            console.log('fetchDashboards: No favourite set, selecting first dashboard as fallback')
+          }
         }
 
         if (dashboardToSelect) {
@@ -113,6 +119,9 @@ export default function Page() {
           setLayout(newLayout)
           setSelectedDashboardName(dashboardToSelect.dashboardName)
           setSelectedDashboardId(dashboardToSelect.dashboardId as number)
+          console.log('fetchDashboards: Selected dashboard - Name:', dashboardToSelect.dashboardName, 'ID:', dashboardToSelect.dashboardId)
+        } else {
+          console.log('fetchDashboards: No dashboard found to select')
         }
       } catch (error) {
         showErrorMessage(error)
