@@ -194,11 +194,14 @@ export default function Page() {
 
       if (isCreatingNew && response.dashboards.length > 0) {
         // For new dashboards, select the one with the highest ID
-        dashboardToSelect = response.dashboards.reduce((max, current) => {
-          const maxId = (max.dashboardId ?? 0) as number
-          const currentId = (current.dashboardId ?? 0) as number
-          return currentId > maxId ? current : max
-        })
+        dashboardToSelect = response.dashboards.reduce(
+          (max: DashboardData, current: DashboardData) => {
+            const maxId = (max.dashboardId ?? 0) as number
+            const currentId = (current.dashboardId ?? 0) as number
+            return currentId > maxId ? current : max
+          },
+          response.dashboards[0]
+        )
         console.log('Save: Created new dashboard, selecting highest ID:', dashboardToSelect.dashboardId)
       } else if (!isCreatingNew) {
         // For existing dashboards, find by ID
