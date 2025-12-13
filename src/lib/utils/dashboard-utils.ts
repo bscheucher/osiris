@@ -20,24 +20,63 @@ export function createSaveDashboardRequest(
 }
 
 export async function getAllDashboards() {
-  return fetchGatewayRaw('/dashboards/get').then((res) => res.json())
+  const res = await fetchGatewayRaw('/dashboards/get')
+
+  if (!res.ok) {
+    const errorText = await res.text()
+    throw new Error(
+      `Failed to get dashboards: ${res.status} - ${errorText}`
+    )
+  }
+
+  return res.json()
 }
 
 export async function saveDashboardData(data: DashboardData) {
-  return fetchGatewayRaw('/dashboards/save', {
+  const res = await fetchGatewayRaw('/dashboards/save', {
     method: 'POST',
     body: JSON.stringify(data),
-  }).then((res) => res.json())
+  })
+
+  if (!res.ok) {
+    const errorText = await res.text()
+    throw new Error(
+      `Failed to save dashboard: ${res.status} - ${errorText}`
+    )
+  }
+
+  return res.json()
 }
 
 export async function setFavouriteDashboard(id: number) {
-  return fetchGatewayRaw(`/dashboards/favouriteDashboard?dashboardId=${id}`, {
-    method: 'POST',
-  }).then((res) => res.json())
+  const res = await fetchGatewayRaw(
+    `/dashboards/favouriteDashboard?dashboardId=${id}`,
+    {
+      method: 'POST',
+    }
+  )
+
+  if (!res.ok) {
+    const errorText = await res.text()
+    throw new Error(
+      `Failed to set favourite dashboard: ${res.status} - ${errorText}`
+    )
+  }
+
+  return res.json()
 }
 
 export async function deleteDashboardData(id: number) {
-  return fetchGatewayRaw(`/dashboards/delete?dashboardId=${id}`, {
+  const res = await fetchGatewayRaw(`/dashboards/delete?dashboardId=${id}`, {
     method: 'DELETE',
-  }).then((res) => res.json())
+  })
+
+  if (!res.ok) {
+    const errorText = await res.text()
+    throw new Error(
+      `Failed to delete dashboard: ${res.status} - ${errorText}`
+    )
+  }
+
+  return res.json()
 }
