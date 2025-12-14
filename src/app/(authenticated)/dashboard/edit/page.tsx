@@ -137,6 +137,7 @@ export default function Page() {
   }, [fetchDashboards])
 
   const saveDashboard = async () => {
+    alert('🔴 SAVE FUNCTION CALLED - If you see this, code is updated!')
     setIsLoadingDashboard(true)
     try {
       let message = ''
@@ -239,8 +240,10 @@ export default function Page() {
         setLayout(newLayout)
         setSelectedDashboardName(dashboardToSelect.dashboardName)
         setSelectedDashboardId(dashboardToSelect.dashboardId as number)
+        alert(`✅ DASHBOARD SELECTED: "${dashboardToSelect.dashboardName}" ID: ${dashboardToSelect.dashboardId}`)
         console.log('Save: Selected - Name:', dashboardToSelect.dashboardName, 'ID:', dashboardToSelect.dashboardId)
       } else {
+        alert('❌ NO DASHBOARD TO SELECT - This is the bug!')
         console.warn('Save: No dashboard to select')
         setSelectedDashboardName('')
         setSelectedDashboardId(null)
