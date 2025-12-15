@@ -1,0 +1,9 @@
+# Playwright runtime files
+storage/
+test-results/
+playwright-report/
+.playwright/
+
+# Keep directory structure but ignore contents
+!storage/.gitkeep
+!test-files/.gitkeep
