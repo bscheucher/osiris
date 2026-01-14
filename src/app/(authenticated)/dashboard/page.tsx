@@ -93,9 +93,16 @@ export default function Page() {
         setLayout(favoriteLayout)
         setSelectedDashboardName(favoriteDashboard.dashboardName)
         setSelectedDashboardId(favoriteDashboard.dashboardId as number)
+      } else if (response.dashboards.length > 0) {
+        // If no favorite is set, select the first dashboard
+        const firstDashboard = response.dashboards[0]
+        const firstLayout = createLayoutFromWidgets(firstDashboard.widgets)
+        setLayout(firstLayout)
+        setSelectedDashboardName(firstDashboard.dashboardName)
+        setSelectedDashboardId(firstDashboard.dashboardId as number)
       }
 
-      const names = response.dashboards.map((d: any) => d.dashboardName)
+      const names = response.dashboards.map((d: DashboardData) => d.dashboardName)
       setDashboardNames(names)
     } catch (error) {
       showErrorMessage(error)
