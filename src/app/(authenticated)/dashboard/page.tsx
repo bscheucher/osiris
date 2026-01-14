@@ -151,16 +151,21 @@ export default function Page() {
         dashboardName = selectedDashboardName
       }
 
+      const isNewDashboard = !selectedDashboardId
+
+      // Set as favorite if:
+      // 1. It's an existing dashboard that is already favorite, OR
+      // 2. It's a new dashboard and there's no existing favorite
       const isFavourite =
+        (isNewDashboard && !dashboardsData?.favouriteDashboard) ||
         dashboardsData?.favouriteDashboard === selectedDashboardId
+
       const saveDashboardRequest = createSaveDashboardRequest(
         dashboardName,
         widgetsData,
         isFavourite,
         selectedDashboardId ?? undefined
       )
-
-      const isNewDashboard = !selectedDashboardId
 
       await saveDashboardData(saveDashboardRequest)
       showSuccess(
