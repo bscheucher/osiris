@@ -127,6 +127,7 @@ export default function Page() {
       }
       if (message.length > 0) {
         showError(message)
+        setIsLoadingDashboard(false)
         return
       }
 
@@ -152,12 +153,35 @@ export default function Page() {
         selectedDashboardId ?? undefined
       )
 
+      const isNewDashboard = !selectedDashboardId
+
       await saveDashboardData(saveDashboardRequest)
       showSuccess(
-        (!selectedDashboardId ? t('message.success.savePrefix') + ' ' : '') +
+        (isNewDashboard ? t('message.success.savePrefix') + ' ' : '') +
           t('message.success.save')
       )
-      await fetchDashboards()
+
+      // Refresh dashboards to get the latest data
+      const response = await getAllDashboards()
+      setDashboardsData(response)
+
+      // If this was a new dashboard, find and select it
+      if (isNewDashboard) {
+        const newDashboard = response.dashboards.find(
+          (d: DashboardData) => d.dashboardName === dashboardName
+        )
+        if (newDashboard) {
+          setSelectedDashboardId(newDashboard.dashboardId as number)
+          setSelectedDashboardName(newDashboard.dashboardName)
+        }
+      } else {
+        // For updates, just update the name if it changed
+        setSelectedDashboardName(dashboardName)
+      }
+
+      const names = response.dashboards.map((d: DashboardData) => d.dashboardName)
+      setDashboardNames(names)
+
       setIsEditMode(false)
       setEditableDashboardName('')
     } catch (error) {
@@ -226,7 +250,7 @@ export default function Page() {
         }
       })
     } catch (error) {
-      console.error('Error setting favorite dashboard:', error)
+      showErrorMessage(error)
     } finally {
       setIsLoadingDashboard(false)
     }
@@ -234,7 +258,7 @@ export default function Page() {
 
   const handleDeleteDashboard = async () => {
     if (!selectedDashboardId) {
-      console.error('No dashboard selected or session unavailable')
+      showError(t('delete.message.error.noDashboardSelected'))
       return
     }
 
@@ -253,6 +277,7 @@ export default function Page() {
       showSuccess(t('delete.message.success.deleted'))
 
       if (!dashboardsData) {
+        setIsLoadingDashboard(false)
         return
       }
 
@@ -273,7 +298,7 @@ export default function Page() {
 
       await fetchDashboards()
     } catch (error) {
-      console.error('Error deleting dashboard:', error)
+      showErrorMessage(error)
     } finally {
       setIsLoadingDashboard(false)
     }
