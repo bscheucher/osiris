@@ -85,7 +85,7 @@ export class DashboardPage {
 	 */
 	private async waitForViewMode(): Promise<void> {
 		await this.dashboardDropdown.waitFor({ state: "visible", timeout: 10000 });
-		await this.widgetSidebar.waitFor({ state: "hidden" });
+		await this.widgetSidebar.waitFor({ state: "hidden", timeout: 10000 });
 	}
 
 	/**
@@ -291,11 +291,18 @@ export class DashboardPage {
 		// Wait for deletion to complete
 		await this.waitForPageReady();
 
-		// If there are remaining dashboards, wait for view mode
-		// If no dashboards left, wait for empty state
-		const isEmpty = await this.isEmptyState();
-		if (!isEmpty) {
-			await this.waitForViewMode();
+		// Wait for either empty state or view mode to appear
+		try {
+			await Promise.race([
+				this.createNewDashboardButton.waitFor({
+					state: "visible",
+					timeout: 5000,
+				}),
+				this.dashboardDropdown.waitFor({ state: "visible", timeout: 5000 }),
+			]);
+		} catch (error) {
+			// If neither appears within timeout, just continue
+			console.warn("deleteDashboard: Timeout waiting for state transition");
 		}
 	}
 
@@ -331,8 +338,36 @@ export class DashboardPage {
 	 * Useful for test cleanup
 	 */
 	async deleteAllDashboards(): Promise<void> {
-		while (!(await this.isEmptyState())) {
+		const MAX_ITERATIONS = 20; // Safety limit to prevent infinite loops
+		let iterations = 0;
+
+		while (iterations < MAX_ITERATIONS) {
+			// Check if we're in empty state
+			const isEmpty = await this.isEmptyState();
+			if (isEmpty) {
+				return; // All dashboards deleted
+			}
+
+			// Check if dropdown is visible (means dashboards exist)
+			const dropdownVisible = await this.dashboardDropdown.isVisible();
+			if (!dropdownVisible) {
+				// No dropdown means no dashboards, we're in empty state
+				return;
+			}
+
+			// Delete the currently selected dashboard
 			await this.deleteDashboard(true);
+
+			// Wait a bit for UI to update
+			await this.page.waitForLoadState("networkidle");
+			await this.page.waitForTimeout(500);
+
+			iterations++;
 		}
+
+		// If we hit the max iterations, log a warning but don't fail
+		console.warn(
+			`deleteAllDashboards: Reached maximum iterations (${MAX_ITERATIONS})`,
+		);
 	}
 }

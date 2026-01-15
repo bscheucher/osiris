@@ -20,9 +20,32 @@ test.describe("Dashboard", () => {
 	test.afterEach(async () => {
 		await allure.step("Cleanup: Delete all dashboards", async () => {
 			try {
+				// Increase timeout for cleanup operations
+				dashboardPage.page.setDefaultTimeout(15000);
+
+				// Check if we're already in empty state
+				const isEmpty = await dashboardPage.isEmptyState();
+				if (isEmpty) {
+					console.log("Cleanup: Already in empty state, nothing to delete");
+					return;
+				}
+
+				// Delete all dashboards
 				await dashboardPage.deleteAllDashboards();
+				console.log("Cleanup: Successfully deleted all dashboards");
 			} catch (error) {
-				console.log("Cleanup: No dashboards to delete or already in empty state");
+				console.log(
+					"Cleanup: Error during cleanup, attempting to navigate to dashboard page",
+				);
+				// If cleanup fails, try navigating to dashboard and checking state
+				try {
+					await dashboardPage.goto();
+				} catch (navError) {
+					console.log("Cleanup: Could not navigate to dashboard page");
+				}
+			} finally {
+				// Reset timeout to default
+				dashboardPage.page.setDefaultTimeout(30000);
 			}
 		});
 	});
