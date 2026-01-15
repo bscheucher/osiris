@@ -31,6 +31,8 @@ import { createLayout, WIDGET_DATA } from '@/lib/utils/widget-utils'
 
 export type DashboardConfig = Record<Widget['id'], { x: number; y: number }>
 
+const SELECTED_DASHBOARD_KEY = 'selectedDashboardId'
+
 export default function Page() {
   const t = useTranslations('dashboard')
   const [isEditMode, setIsEditMode] = useState(false)
@@ -81,25 +83,39 @@ export default function Page() {
       const response = await getAllDashboards()
       setDashboardsData(response)
 
-      const favoriteDashboard = response.dashboards.find(
-        (dashboard: DashboardData) =>
-          dashboard.dashboardId === response.favouriteDashboard
-      )
+      let dashboardToSelect: DashboardData | undefined
 
-      if (favoriteDashboard) {
-        const favoriteLayout = createLayoutFromWidgets(
-          favoriteDashboard.widgets
+      // Priority 1: Previously selected dashboard (from localStorage)
+      const savedDashboardId = localStorage.getItem(SELECTED_DASHBOARD_KEY)
+      if (savedDashboardId) {
+        dashboardToSelect = response.dashboards.find(
+          (d: DashboardData) => d.dashboardId === parseInt(savedDashboardId)
         )
-        setLayout(favoriteLayout)
-        setSelectedDashboardName(favoriteDashboard.dashboardName)
-        setSelectedDashboardId(favoriteDashboard.dashboardId as number)
-      } else if (response.dashboards.length > 0) {
-        // If no favorite is set, select the first dashboard
-        const firstDashboard = response.dashboards[0]
-        const firstLayout = createLayoutFromWidgets(firstDashboard.widgets)
-        setLayout(firstLayout)
-        setSelectedDashboardName(firstDashboard.dashboardName)
-        setSelectedDashboardId(firstDashboard.dashboardId as number)
+      }
+
+      // Priority 2: Favorite dashboard
+      if (!dashboardToSelect) {
+        dashboardToSelect = response.dashboards.find(
+          (dashboard: DashboardData) =>
+            dashboard.dashboardId === response.favouriteDashboard
+        )
+      }
+
+      // Priority 3: First dashboard
+      if (!dashboardToSelect && response.dashboards.length > 0) {
+        dashboardToSelect = response.dashboards[0]
+      }
+
+      // Select the dashboard
+      if (dashboardToSelect) {
+        const selectedLayout = createLayoutFromWidgets(dashboardToSelect.widgets)
+        setLayout(selectedLayout)
+        setSelectedDashboardName(dashboardToSelect.dashboardName)
+        setSelectedDashboardId(dashboardToSelect.dashboardId as number)
+        localStorage.setItem(
+          SELECTED_DASHBOARD_KEY,
+          dashboardToSelect.dashboardId!.toString()
+        )
       }
 
       const names = response.dashboards.map((d: DashboardData) => d.dashboardName)
@@ -185,6 +201,11 @@ export default function Page() {
         if (newDashboard) {
           setSelectedDashboardId(newDashboard.dashboardId as number)
           setSelectedDashboardName(newDashboard.dashboardName)
+          // Save to localStorage
+          localStorage.setItem(
+            SELECTED_DASHBOARD_KEY,
+            newDashboard.dashboardId!.toString()
+          )
         }
       } else {
         // For updates, just update the name if it changed
@@ -219,6 +240,14 @@ export default function Page() {
       setSelectedDashboardId(selectedDashboard.dashboardId ?? null)
       setSelectedDashboardName(selectedName)
       setEditableDashboardName(selectedName)
+
+      // Save to localStorage
+      if (selectedDashboard.dashboardId) {
+        localStorage.setItem(
+          SELECTED_DASHBOARD_KEY,
+          selectedDashboard.dashboardId.toString()
+        )
+      }
     }
   }
 
@@ -301,6 +330,7 @@ export default function Page() {
         setSelectedDashboardId(null)
         setSelectedDashboardName('')
         setLayout([])
+        localStorage.removeItem(SELECTED_DASHBOARD_KEY)
       } else {
         const firstDashboard = updatedDashboards[0]
         setSelectedDashboardId(firstDashboard.dashboardId as number)
