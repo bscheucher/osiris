@@ -1,0 +1,1 @@
+export { TeilnehmerKorrigierenPage } from './TeilnehmerKorrigierenPage'
