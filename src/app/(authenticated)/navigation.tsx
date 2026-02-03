@@ -23,8 +23,8 @@ import {
   UserMinusIcon,
   UserPlusIcon,
 } from '@heroicons/react/24/outline'
+import { useMsal } from '@azure/msal-react'
 import dayjs from 'dayjs'
-import { signOut } from 'next-auth/react'
 import { useTranslations } from 'next-intl'
 import React, { ReactNode } from 'react'
 
@@ -73,6 +73,7 @@ const DisclosureSection = ({
 
 const Navigation: React.FC = () => {
   const t = useTranslations('navigation')
+  const { instance } = useMsal()
   const { roles, user, hasSomeRole } = useUserStore()
 
   const [openNavigationItems, setOpenNavigationItems] = useLocalStorage<
@@ -89,10 +90,16 @@ const Navigation: React.FC = () => {
     })
   }
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     try {
-      signOut({
-        callbackUrl: `https://login.microsoftonline.com/${process.env.SSO_TENANT_ID!}/oauth2/v2.0/logout?post_logout_redirect_uri=${encodeURIComponent(`${process.env.NEXTAUTH_URL!}/login`)}`,
+      // Call backend logout endpoint
+      await fetch(`${process.env.NEXT_PUBLIC_GATEWAY_URL}/benutzer/logout`, {
+        cache: 'no-store',
+      }).catch(() => {})
+
+      // Logout from MSAL
+      await instance.logoutRedirect({
+        postLogoutRedirectUri: '/login',
       })
     } catch (e) {
       showErrorMessage(e)

@@ -1,7 +1,5 @@
 import { NextRequest } from 'next/server'
 
-import { serverSession } from '../../auth/[...nextauth]/auth-options'
-
 // Helper to forward headers while removing ones that cause issues
 function filterHeaders(headers: Headers): Headers {
   const filtered = new Headers(headers)
@@ -9,7 +7,6 @@ function filterHeaders(headers: Headers): Headers {
   filtered.delete('host')
   filtered.delete('connection')
   filtered.delete('content-length')
-  filtered.delete('authorization')
   return filtered
 }
 
@@ -34,10 +31,19 @@ async function handleRequest(request: NextRequest, method: string) {
 
     const headers = filterHeaders(request.headers)
 
-    const session = await serverSession()
-    if (!session) throw new Error('Unauthorized')
+    // Check for Authorization header from client
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader) {
+      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+        status: 401,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+    }
 
-    headers.set('authorization', `Bearer ${session.token_value.access_token}`)
+    // Forward the authorization header
+    headers.set('authorization', authHeader)
 
     // Get the request body if it exists
     let body: BodyInit | null = null

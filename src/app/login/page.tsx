@@ -1,16 +1,39 @@
+'use client'
+
+import { useIsAuthenticated, useMsal } from '@azure/msal-react'
+import { InteractionStatus } from '@azure/msal-browser'
 import Image from 'next/image'
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 import { SignInForm } from './sign-in-form'
-import { serverSession } from '../api/auth/[...nextauth]/auth-options'
 import AspireLogo from '@/../public/aspire-logo.svg'
 import MicrosoftLogo from '@/../public/microsoft.webp'
 
-export default async function Page() {
-  const session = await serverSession()
+export default function Page() {
+  const isAuthenticated = useIsAuthenticated()
+  const { inProgress } = useMsal()
+  const router = useRouter()
 
-  if (session) {
-    redirect('/dashboard')
+  useEffect(() => {
+    // Wait until MSAL has finished any interaction before redirecting
+    if (isAuthenticated && inProgress === InteractionStatus.None) {
+      router.push('/dashboard')
+    }
+  }, [isAuthenticated, inProgress, router])
+
+  // Show loading state while MSAL is processing
+  if (inProgress !== InteractionStatus.None) {
+    return (
+      <div className="flex min-h-full flex-1 flex-col items-center justify-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-blue-600"></div>
+      </div>
+    )
+  }
+
+  // If authenticated, don't render the login form (redirect will happen)
+  if (isAuthenticated) {
+    return null
   }
 
   return (

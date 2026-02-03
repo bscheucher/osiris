@@ -1,12 +1,14 @@
 'use client'
 
-import { signIn } from 'next-auth/react'
+import { useMsal } from '@azure/msal-react'
 import React, { useState } from 'react'
 
 import ButtonTw, { ButtonSize } from '@/components/atoms/button-tw'
+import { loginRequest } from '@/lib/config/msal-config'
 import { showError } from '@/lib/utils/toast-utils'
 
 export const SignInForm = () => {
+  const { instance } = useMsal()
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -14,12 +16,14 @@ export const SignInForm = () => {
     setLoading(true)
 
     try {
-      await signIn('azure-ad', {
-        callbackUrl: '/dashboard',
+      // Use redirect login for full-page navigation
+      await instance.loginRedirect({
+        ...loginRequest,
+        redirectStartPage: '/dashboard',
       })
-    } catch (__) {
+    } catch (error) {
+      console.error('Login error:', error)
       showError('An error occurred during sign in.')
-    } finally {
       setLoading(false)
     }
   }

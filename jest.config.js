@@ -16,7 +16,7 @@ const config = {
     '<rootDir>/e2e/',
   ],
   transformIgnorePatterns: [
-    'node_modules/(?!(jose|openid-client|@panva|oidc-token-hash|next-auth).*)',
+    'node_modules/(?!(jose|openid-client|@panva|oidc-token-hash|@azure).*)',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {

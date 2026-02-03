@@ -1,9 +1,8 @@
-import { signOut } from 'next-auth/react'
-
 import { apiCache } from './cache-utils'
 import { stripErrorsFromPayload } from './form-utils'
 import { downloadFileFromStream } from './object-utils'
 import { formFieldToUploadTypeMap } from '../constants/mitarbeiter-constants'
+import { authService } from '@/lib/services/auth-service'
 import { showError, showErrorMessage, showInfo } from '@/lib/utils/toast-utils'
 
 export interface ErrorsResponse {
@@ -49,9 +48,9 @@ async function handleResponse<T>(
     throw new Error('Keine Antwort vom Server')
   }
 
-  // TODO: could potentially still kick in even with improved middleware
+  // Handle unauthorized responses by triggering MSAL logout
   if (response.status === 401) {
-    await signOut({ callbackUrl: '/login' })
+    await authService.logout()
   }
 
   if (response && response.status) {
@@ -134,6 +133,12 @@ export async function fetchGateway<T, U = any>(
   }
 
   try {
+    // Get access token from MSAL
+    const accessToken = await authService.getAccessToken()
+    if (!accessToken) {
+      throw new Error('Nicht authentifiziert')
+    }
+
     // Detect content type and prepare body
     let contentType: string | undefined = 'application/json'
     let body: any = undefined
@@ -160,9 +165,10 @@ export async function fetchGateway<T, U = any>(
       contentType = 'application/json'
     }
 
-    // Prepare headers
+    // Prepare headers with Authorization
     const headers = new Headers({
       ...(contentType && { 'Content-Type': contentType }),
+      Authorization: `Bearer ${accessToken}`,
       ...options?.headers,
     })
 
@@ -206,11 +212,18 @@ export async function fetchGatewayRaw(
   options?: RequestInit & { skipDefaultContentType?: boolean }
 ): Promise<any> {
   try {
+    // Get access token from MSAL
+    const accessToken = await authService.getAccessToken()
+    if (!accessToken) {
+      throw new Error('Nicht authentifiziert')
+    }
+
     const headers = new Headers({
       // Only set default Content-Type if not explicitly skipped
       ...(!options?.skipDefaultContentType && {
         'Content-Type': 'application/json',
       }),
+      Authorization: `Bearer ${accessToken}`,
       ...options?.headers,
     })
 

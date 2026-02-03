@@ -9,7 +9,7 @@ import { twMerge } from 'tailwind-merge'
 import { MainModal } from '@/components/organisms/main-modal'
 import { NavigationBlockerProvider } from '@/contexts/navigation-blocker-context'
 import { ModalProvider } from '@/hooks/use-modal'
-import NextAuthProvider from '@/providers/next-auth'
+import MsalProvider from '@/providers/msal-provider'
 import '@/styles/globals.css'
 import '@/styles/dashboard.css'
 import '@/styles/datepicker-tw.css'
@@ -65,14 +65,14 @@ export default async function RootLayout({
       className={twMerge(inter.variable, 'font-inter h-full bg-gray-50')}
     >
       <body className={twMerge(inter.className, 'font-inter h-full')}>
-        <NextAuthProvider>
+        <MsalProvider>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <ModalProvider>
               <NavigationBlockerProvider>{children}</NavigationBlockerProvider>
               <MainModal />
             </ModalProvider>
           </NextIntlClientProvider>
-        </NextAuthProvider>
+        </MsalProvider>
       </body>
     </html>
   )

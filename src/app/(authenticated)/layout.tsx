@@ -12,6 +12,7 @@ import { ReactNode, Suspense, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 
 import Navigation from './navigation'
+import { AuthGuard } from '@/components/auth/auth-guard'
 import { BlockingAwareLink } from '@/components/atoms/blocking-aware-link'
 import Chatbot from '@/components/organisms/chatbot'
 import useAsyncEffect from '@/hooks/use-async-effect'
@@ -38,8 +39,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
   }, [])
 
   return (
-    <Suspense>
-      <div>
+    <AuthGuard>
+      <Suspense>
+        <div>
         <Dialog
           open={sidebarOpen}
           onClose={setSidebarOpen}
@@ -135,8 +137,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <div className="px-4 py-10 sm:px-6 lg:px-8">{children} </div>
         </main>
         {hasSomeRole(ROLE.FN_AI_CHATBOT) && <Chatbot />}
-      </div>
-    </Suspense>
+        </div>
+      </Suspense>
+    </AuthGuard>
   )
 }
 

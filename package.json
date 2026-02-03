@@ -22,6 +22,8 @@
     "knip": "knip"
   },
   "dependencies": {
+    "@azure/msal-browser": "^5.1.0",
+    "@azure/msal-react": "^5.0.3",
     "@floating-ui/react": "^0.27.8",
     "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^2.2.0",
@@ -33,12 +35,11 @@
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
     "next": "^15.3.3",
-    "next-auth": "^4.24.11",
     "next-intl": "^3.23.2",
     "postcss": "^8.5.3",
-    "react": "^19.1.0",
+    "react": "^19.2.4",
     "react-datepicker": "^7.6.0",
-    "react-dom": "^19.1.0",
+    "react-dom": "^19.2.4",
     "react-grid-layout": "^1.5.1",
     "react-hook-form": "^7.56.1",
     "react-hot-toast": "^2.5.2",
