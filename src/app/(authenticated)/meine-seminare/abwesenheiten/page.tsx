@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import React from 'react'
+import dummyData from '../dummy-data/dummy-data.json'
 
 import { LayoutWrapper } from '@/components/molecules/layout-wrapper'
 import {
@@ -10,6 +11,8 @@ import {
   TableTw,
 } from '@/components/molecules/table-tw'
 
+
+
 export default function Page() {
   const t = useTranslations('meineSeminare.abwesenheiten')
 
@@ -17,20 +20,31 @@ export default function Page() {
     <LayoutWrapper title={t('title')}>
       <TableTw>
         <thead className="bg-gray-50">
-          <tr>
-            <TableHeaderTw>{t('table.vorname')}</TableHeaderTw>
-            <TableHeaderTw>{t('table.nachname')}</TableHeaderTw>
-            <TableHeaderTw>{t('table.svnr')}</TableHeaderTw>
-            <TableHeaderTw>{t('table.seminar')}</TableHeaderTw>
-            <TableHeaderTw>{t('table.dokument')}</TableHeaderTw>
-          </tr>
+        <tr>
+          <TableHeaderTw>{t('table.vorname')}</TableHeaderTw>
+          <TableHeaderTw>{t('table.nachname')}</TableHeaderTw>
+          <TableHeaderTw>{t('table.svnr')}</TableHeaderTw>
+          <TableHeaderTw>{t('table.dokument')}</TableHeaderTw>
+        </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
-          <tr>
-            <TableCellTw colSpan={5} className="text-center text-gray-500">
-              {t('noEntries')}
+        {dummyData.map((entry) => (
+          <tr key={entry.id}>
+            <TableCellTw>{entry.vorname}</TableCellTw>
+            <TableCellTw>{entry.nachname}</TableCellTw>
+            <TableCellTw className="text-center text-gray-500">{entry.sv_nummer}</TableCellTw>
+            <TableCellTw className="text-center">
+              <a
+                href={entry.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                {t('table.dokument')}
+              </a>
             </TableCellTw>
           </tr>
+          ))}
         </tbody>
       </TableTw>
     </LayoutWrapper>
