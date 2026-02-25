@@ -39,6 +39,8 @@ export default function Page() {
           <TableHeaderTw>{t('table.vorname')}</TableHeaderTw>
           <TableHeaderTw>{t('table.nachname')}</TableHeaderTw>
           <TableHeaderTw>{t('table.svnr')}</TableHeaderTw>
+          <TableHeaderTw>{t('table.start-datum')}</TableHeaderTw>
+          <TableHeaderTw>{t('table.end-datum')}</TableHeaderTw>
           <TableHeaderTw>{t('table.dokument')}</TableHeaderTw>
         </tr>
         </thead>
@@ -48,6 +50,8 @@ export default function Page() {
             <TableCellTw>{entry.vorname}</TableCellTw>
             <TableCellTw>{entry.nachname}</TableCellTw>
             <TableCellTw className="text-center text-gray-500">{entry.sv_nummer}</TableCellTw>
+            <TableCellTw>{entry.start_datum}</TableCellTw>
+            <TableCellTw>{entry.end_datum}</TableCellTw>
             <TableCellTw className="text-center">
               <a
                 href={entry.url}
