@@ -357,6 +357,22 @@ const Navigation: React.FC = () => {
               </NavigationLink>
             </DisclosureSection>
           )}
+
+          {hasSomeRole([ROLE.MEINE_SEMINARE]) && (
+            <DisclosureSection
+              name="meineSeminare"
+              openNavigationItems={openNavigationItems}
+              handleDisclosureChange={handleDisclosureChange}
+            >
+              <NavigationLink
+                href="/meine-seminare/abwesenheiten"
+                Icon={(props) => <CalendarDaysIcon {...props} />}
+                isVisible={hasSomeRole([ROLE.MEINE_SEMINARE])}
+              >
+                {t('meineSeminare.abwesenheiten')}
+              </NavigationLink>
+            </DisclosureSection>
+          )}
         </ul>
       )}
       <div className="mt-auto mb-6 text-sm leading-6 font-normal text-gray-900">
