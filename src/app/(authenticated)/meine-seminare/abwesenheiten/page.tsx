@@ -1,8 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import React from 'react'
-import dummyData from '../dummy-data/dummy-data.json'
+import React, { useEffect, useState } from 'react'
 
 import { LayoutWrapper } from '@/components/molecules/layout-wrapper'
 import {
@@ -11,10 +10,26 @@ import {
   TableTw,
 } from '@/components/molecules/table-tw'
 
-
+interface AbwesenheitEntry {
+  id: number
+  vorname: string
+  nachname: string
+  sv_nummer: string
+  url: string
+  start_datum: string
+  end_datum: string
+  created_at: string
+}
 
 export default function Page() {
   const t = useTranslations('meineSeminare.abwesenheiten')
+  const [data, setData] = useState<AbwesenheitEntry[]>([])
+
+  useEffect(() => {
+    fetch('/api/meine-seminare/abwesenheiten')
+      .then((res) => res.json())
+      .then((json: AbwesenheitEntry[]) => setData(json))
+  }, [])
 
   return (
     <LayoutWrapper title={t('title')}>
@@ -28,7 +43,7 @@ export default function Page() {
         </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
-        {dummyData.map((entry) => (
+        {data.map((entry) => (
           <tr key={entry.id}>
             <TableCellTw>{entry.vorname}</TableCellTw>
             <TableCellTw>{entry.nachname}</TableCellTw>
