@@ -202,10 +202,6 @@
       "label": "Seminare",
       "vertretungsplanung": "Vertretungsplanung"
     },
-    "meineSeminare": {
-      "abwesenheiten": "Abwesenheiten",
-      "label": "Meine Seminare"
-    },
     "teilnehmer": {
       "anlegen": "Anlegen",
       "anwesenheitenVerwalten": "Anwesenheiten verwalten",
@@ -2539,15 +2535,24 @@
   },
   "meineSeminare": {
     "abwesenheiten": {
-      "noEntries": "Keine Einträge vorhanden",
-      "table": {
-        "dokument": "Dokument",
-        "nachname": "Nachname",
-        "seminar": "Seminar",
-        "svnr": "SVNR",
-        "vorname": "Vorname"
+      "title": "Abwesenheiten",
+      "filter": {
+        "placeholder": {
+          "vorname": "Vorname filtern",
+          "nachname": "Nachname filtern",
+          "svnr": "SV-Nr. filtern",
+          "startDatum": "Von filtern",
+          "endDatum": "Bis filtern"
+        }
       },
-      "title": "Abwesenheiten"
+      "table": {
+        "vorname": "Vorname",
+        "nachname": "Nachname",
+        "svnr": "SV-Nr.",
+        "start-datum": "Von",
+        "end-datum": "Bis",
+        "dokument": "Dokument"
+      }
     }
   },
   "errorPage": {

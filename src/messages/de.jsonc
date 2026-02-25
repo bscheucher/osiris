@@ -2621,6 +2621,31 @@
     }
   },
   // ============================================================================
+  // MEINE SEMINARE
+  // ============================================================================
+  "meineSeminare": {
+    "abwesenheiten": {
+      "title": "Abwesenheiten",
+      "filter": {
+        "placeholder": {
+          "vorname": "Vorname filtern",
+          "nachname": "Nachname filtern",
+          "svnr": "SV-Nr. filtern",
+          "startDatum": "Von filtern",
+          "endDatum": "Bis filtern"
+        }
+      },
+      "table": {
+        "vorname": "Vorname",
+        "nachname": "Nachname",
+        "svnr": "SV-Nr.",
+        "start-datum": "Von",
+        "end-datum": "Bis",
+        "dokument": "Dokument"
+      }
+    }
+  },
+  // ============================================================================
   // ERROR PAGE
   // ============================================================================
   "errorPage": {
