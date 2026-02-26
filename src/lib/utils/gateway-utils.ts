@@ -62,6 +62,11 @@ async function handleResponse<T>(
   if (response.headers.get('content-type') === 'application/json') {
     const responseData = await response.json()
 
+    // Handle bare array responses (backends that return a plain array directly)
+    if (Array.isArray(responseData)) {
+      return { data: responseData, success: true, pagination: null, response }
+    }
+
     const { success, data, pagination, message } = responseData
 
     // display error messages for integration / third party errors
@@ -75,11 +80,6 @@ async function handleResponse<T>(
 
     if (!data || !Array.isArray(data)) {
       return responseData
-    }
-
-    // Only transform if data follows JSON:API format (items have 'type' and 'attributes' properties)
-    if (data.length === 0 || data[0].type === undefined || data[0].attributes === undefined) {
-      return { data, success, pagination, response }
     }
 
     const transformedData: any = {}
