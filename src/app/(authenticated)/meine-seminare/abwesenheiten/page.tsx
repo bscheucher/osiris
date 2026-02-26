@@ -1,8 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import React from 'react'
-import dummyData from '../dummy-data/dummy-data.json'
+import React, { useCallback, useState } from 'react'
 
 import { LayoutWrapper } from '@/components/molecules/layout-wrapper'
 import {
@@ -10,11 +9,38 @@ import {
   TableHeaderTw,
   TableTw,
 } from '@/components/molecules/table-tw'
+import useAsyncEffect from '@/hooks/use-async-effect'
+import { getUser } from '@/lib/utils/api-utils'
+import { executeGET } from '@/lib/utils/gateway-utils'
 
-
+interface AbwesenheitEntry {
+  id: number
+  vorname: string
+  nachname: string
+  sv_nummer: string
+  url: string
+}
 
 export default function Page() {
   const t = useTranslations('meineSeminare.abwesenheiten')
+  const [data, setData] = useState<AbwesenheitEntry[]>([])
+
+  const executeGet = useCallback(async () => {
+    const user = await getUser()
+    if (!user?.azureId) return
+
+    const response = await executeGET<AbwesenheitEntry[]>(
+      `/tn-document/abwesenheiten?azureId=${user.azureId}`
+    )
+
+    if (response.data) {
+      setData(response.data)
+    }
+  }, [])
+
+  useAsyncEffect(async () => {
+    await executeGet()
+  }, [executeGet])
 
   return (
     <LayoutWrapper title={t('title')}>
@@ -28,7 +54,7 @@ export default function Page() {
         </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
-        {dummyData.map((entry) => (
+        {data.map((entry) => (
           <tr key={entry.id}>
             <TableCellTw>{entry.vorname}</TableCellTw>
             <TableCellTw>{entry.nachname}</TableCellTw>
