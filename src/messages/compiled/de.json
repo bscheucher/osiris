@@ -2539,12 +2539,17 @@
   },
   "meineSeminare": {
     "abwesenheiten": {
+      "error": {
+        "laden": "Fehler beim Laden der Abwesenheiten"
+      },
       "noEntries": "Keine Einträge vorhanden",
       "table": {
+        "bis": "Bis",
         "dokument": "Dokument",
         "nachname": "Nachname",
         "seminar": "Seminar",
         "svnr": "SVNR",
+        "von": "Von",
         "vorname": "Vorname"
       },
       "title": "Abwesenheiten"

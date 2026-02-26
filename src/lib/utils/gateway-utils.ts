@@ -77,6 +77,11 @@ async function handleResponse<T>(
       return responseData
     }
 
+    // Only transform if data follows JSON:API format (items have 'type' and 'attributes' properties)
+    if (data.length === 0 || data[0].type === undefined || data[0].attributes === undefined) {
+      return { data, success, pagination, response }
+    }
+
     const transformedData: any = {}
 
     data.forEach((item: any) => {

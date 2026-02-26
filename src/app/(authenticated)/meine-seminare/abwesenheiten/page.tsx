@@ -1,5 +1,6 @@
 'use client'
 
+import dayjs from 'dayjs'
 import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'
 
@@ -19,6 +20,8 @@ interface AbwesenheitEntry {
   vorname: string
   nachname: string
   sv_nummer: string
+  start_datum: string
+  end_datum: string
   url: string
 }
 
@@ -51,6 +54,8 @@ export default function Page() {
           <TableHeaderTw>{t('table.vorname')}</TableHeaderTw>
           <TableHeaderTw>{t('table.nachname')}</TableHeaderTw>
           <TableHeaderTw>{t('table.svnr')}</TableHeaderTw>
+          <TableHeaderTw>{t('table.von')}</TableHeaderTw>
+          <TableHeaderTw>{t('table.bis')}</TableHeaderTw>
           <TableHeaderTw>{t('table.dokument')}</TableHeaderTw>
         </tr>
         </thead>
@@ -60,6 +65,8 @@ export default function Page() {
             <TableCellTw>{entry.vorname}</TableCellTw>
             <TableCellTw>{entry.nachname}</TableCellTw>
             <TableCellTw className="text-center text-gray-500">{entry.sv_nummer}</TableCellTw>
+            <TableCellTw>{dayjs(entry.start_datum).format('DD.MM.YYYY')}</TableCellTw>
+            <TableCellTw>{dayjs(entry.end_datum).format('DD.MM.YYYY')}</TableCellTw>
             <TableCellTw className="text-center">
               <a
                 href={entry.url}
