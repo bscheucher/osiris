@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 
 import { LayoutWrapper } from '@/components/molecules/layout-wrapper'
 import {
@@ -12,6 +12,7 @@ import {
 import useAsyncEffect from '@/hooks/use-async-effect'
 import { getUser } from '@/lib/utils/api-utils'
 import { executeGET } from '@/lib/utils/gateway-utils'
+import { showError } from '@/lib/utils/toast-utils'
 
 interface AbwesenheitEntry {
   id: number
@@ -25,22 +26,22 @@ export default function Page() {
   const t = useTranslations('meineSeminare.abwesenheiten')
   const [data, setData] = useState<AbwesenheitEntry[]>([])
 
-  const executeGet = useCallback(async () => {
-    const user = await getUser()
-    if (!user?.azureId) return
+  useAsyncEffect(async () => {
+    try {
+      const user = await getUser()
+      if (!user?.azureId) return
 
-    const response = await executeGET<AbwesenheitEntry[]>(
-      `/tn-document/abwesenheiten?azureId=${user.azureId}`
-    )
+      const { data } = await executeGET<AbwesenheitEntry[]>(
+        `/tn-document/abwesenheiten?azureId=${user.azureId}`
+      )
 
-    if (response.data) {
-      setData(response.data)
+      if (data) {
+        setData(data)
+      }
+    } catch (error) {
+      showError(t('error.laden'))
     }
   }, [])
-
-  useAsyncEffect(async () => {
-    await executeGet()
-  }, [executeGet])
 
   return (
     <LayoutWrapper title={t('title')}>
