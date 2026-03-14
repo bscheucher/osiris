@@ -1,0 +1,148 @@
+parameters:
+- name: environment
+  displayName: Target environment
+  type: string
+  default: test
+  values:
+  - test
+  - qa
+  - shadow-prod
+
+- name: imageTag
+  displayName: Image tag to deploy
+  type: string
+  default: latest
+
+- name: restartAppService
+  displayName: Restart frontend after updating image
+  type: boolean
+  default: true
+
+variables:
+  - name: IMAGE_SHORT_NAME
+    value: $(Build.Repository.Name)
+
+  - ${{ if eq(parameters.environment, 'test') }}:
+    - name: SERVICE_CONNECTION
+      value: sp-ibosng-pipelines-dev
+    - name: CONTAINER_REGISTRY_SHORT_NAME
+      value: ibosngcontainerregistry
+    - name: CONTAINER_REGISTRY
+      value: ibosngcontainerregistry.azurecr.io
+    - name: ADO_ENVIRONMENT
+      value: 'dev-aks'
+    - name: AZURE_RESOURCE_GROUP
+      value: rg-ibosng-test-westeu
+    - name: APP_SERVICE_NAME
+      value: ibosNGfrontendTestApp
+
+  # QA
+  - ${{ if eq(parameters.environment, 'qa') }}:
+    - name: SERVICE_CONNECTION
+      value: sp-ibosng-pipelines-dev
+    - name: CONTAINER_REGISTRY_SHORT_NAME
+      value: ibosngcontainerregistry
+    - name: CONTAINER_REGISTRY
+      value: ibosngcontainerregistry.azurecr.io
+    - name: ADO_ENVIRONMENT
+      value: 'dev-aks'
+    - name: AZURE_RESOURCE_GROUP
+      value: qa-rg-ibosng-westeu
+    - name: APP_SERVICE_NAME
+      value: ibosng-frontend-qa
+
+  - ${{ if eq(parameters.environment, 'shadow-prod') }}:
+    - name: SERVICE_CONNECTION
+      value: sp-ibosng
+    - name: CONTAINER_REGISTRY_SHORT_NAME
+      value: ibosngcontainerregistryprod
+    - name: CONTAINER_REGISTRY
+      value: ibosngcontainerregistryprod.azurecr.io
+    - name: ADO_ENVIRONMENT
+      value: 'shadow-prod'
+    - name: AZURE_RESOURCE_GROUP
+      value: rg-ibosng-prod-westeu
+    - name: APP_SERVICE_NAME
+      value: ibosNGfrontendShadow
+
+  - name: IMAGE_FULL_NAME
+    value: $(CONTAINER_REGISTRY)/$(IMAGE_SHORT_NAME):${{ parameters.imageTag }}
+
+name: $(Build.Repository.Name)_${{ parameters.environment }}__Deploy_$(Build.BuildId)__$(Date:yyyy-MM-dd_HH.mm.ss)
+
+trigger: none
+
+pool:
+  vmImage: 'ubuntu-24.04'
+
+stages:
+- stage: Deploy
+  displayName: Deploy image to App Service
+  jobs:
+  - deployment: deploy_app_service
+    displayName: Configure App Service image
+    environment: $(ADO_ENVIRONMENT)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: self
+
+          - task: AzureCLI@2
+            displayName: 'Tag image in ACR for deployment'
+            inputs:
+              azureSubscription: $(SERVICE_CONNECTION)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                set -euo pipefail
+
+                echo "Tagging $(IMAGE_FULL_NAME) as latest and env-${{ parameters.environment }} in ACR..."
+
+                az acr import \
+                  --name $(CONTAINER_REGISTRY_SHORT_NAME) \
+                  --source $(IMAGE_FULL_NAME) \
+                  --image $(IMAGE_SHORT_NAME):latest \
+                  --force
+
+                az acr import \
+                  --name $(CONTAINER_REGISTRY_SHORT_NAME) \
+                  --source $(IMAGE_FULL_NAME) \
+                  --image $(IMAGE_SHORT_NAME):env-${{ parameters.environment }} \
+                  --force
+
+                echo "Completed tagging operations."
+
+          - task: AzureCLI@2
+            displayName: 'Update App Service container configuration'
+            inputs:
+              azureSubscription: $(SERVICE_CONNECTION)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                set -euo pipefail
+
+                echo "Updating container image for $(APP_SERVICE_NAME) to $(IMAGE_FULL_NAME)..."
+
+                az webapp config container set \
+                  --name $(APP_SERVICE_NAME) \
+                  --resource-group $(AZURE_RESOURCE_GROUP) \
+                  --container-image-name $(IMAGE_FULL_NAME) \
+                  --container-registry-url https://$(CONTAINER_REGISTRY)
+
+                echo "App Service configuration update initiated."
+
+          - ${{ if eq(parameters.restartAppService, true) }}:
+            - task: AzureCLI@2
+              displayName: 'Restart App Service'
+              inputs:
+                azureSubscription: $(SERVICE_CONNECTION)
+                scriptType: bash
+                scriptLocation: inlineScript
+                inlineScript: |
+                  set -euo pipefail
+                  echo "Restarting App Service $(APP_SERVICE_NAME)..."
+                  az webapp restart \
+                    --name $(APP_SERVICE_NAME) \
+                    --resource-group $(AZURE_RESOURCE_GROUP)
+                  echo "Restart requested."

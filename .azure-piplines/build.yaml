@@ -1,0 +1,20 @@
+variables:
+  - name: NPM_CONFIG_CACHE
+    value: $(Pipeline.Workspace)/.npm
+
+name: $(Build.Repository.Name)__Build_$(Build.BuildId)__$(Date:yyyy-MM-dd_HH.mm.ss)
+
+trigger: none
+
+pool:
+  vmImage: 'ubuntu-24.04'
+
+steps:
+
+  - template: templates/install-nodejs.yaml
+
+  - template: templates/npm-install-with-cache.yaml
+    parameters:
+      NPM_CONFIG_CACHE: $(NPM_CONFIG_CACHE)
+
+  - template: templates/build-frontend.yaml

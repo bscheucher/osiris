@@ -1,0 +1,16 @@
+parameters:
+  - name: NPM_CONFIG_CACHE
+    type: string
+
+steps:
+  - task: Cache@2
+    inputs:
+      key: 'package-lock.json'
+      path: ${{parameters.NPM_CONFIG_CACHE}}
+    displayName: Cache npm packages
+
+  - script: npm ci --cache ${{parameters.NPM_CONFIG_CACHE}} --prefer-offline
+    displayName: Install dependencies with npm
+
+  - script: npm cache verify --cache ${{parameters.NPM_CONFIG_CACHE}}
+    displayName: Verify npm cache
